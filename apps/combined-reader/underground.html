@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#a67c52">
+
+    <style>
+    /* Dodger Blue - Breakthrough Version */
+    body.theme-dodger {
+        --bg: #0a0f1a;
+        --surface: #13213d;
+        --surface-alt: #1e2f5c;
+        --text: #e8f0ff;
+        --text-muted: #a3b8e0;
+        --text-hover: #1a1a1d;
+        --border: rgba(30, 144, 255, 0.25);
+
+        --theme-accent: #1E90FF;
+        --theme-accent-dark: #0075EB;
+        --theme-accent-light: #4da6ff;           /* Bright Dodger Blue */
+        --theme-glass: rgba(30, 144, 255, 0.35);
+        --theme-border: rgba(30, 144, 255, 0.45);
+        --theme-button: rgba(30, 144, 255, 0.22);
+        --theme-button-border: rgba(30, 144, 255, 0.45);
+        --theme-highlight-bg: rgba(30, 144, 255, 0.25);
+        --theme-highlight-border: #1E90FF;
+        --theme-highlight-glow: rgba(30, 144, 255, 0.45);
+        --theme-verseno: #1E90FF;
+    }
+
+    /* Dark Blue - Breakthrough KJV */
+    body.theme-darkblue {
+        --bg: #0a0f1a;
+        --surface: #13213d;
+        --surface-alt: #1e2f5c;
+        --text: #e8f0ff;
+        --text-muted: #a3b8e0;
+        --text-hover: #a3b8e0;
+        --border: rgba(0, 0, 255, 0.25);
+
+        --theme-accent: #0000CD;
+        --theme-accent-dark: #0000A3;
+        --theme-accent-light: #0000EF;           /* Bright Blue */
+        --theme-glass: rgba(0, 0, 205, 0.52);
+        --theme-border: rgba(0, 0, 255, 0.48);
+        --theme-button: rgba(255, 255, 255, 0.18);
+        --theme-button-border: rgba(0, 0, 255, 0.38);
+        --theme-highlight-bg: rgba(0, 0, 205, 0.28);
+        --theme-highlight-border: #0000FF;
+        --theme-highlight-glow: rgba(0, 0, 205, 0.45);
+        --theme-verseno: #3b4fff;
+    }
+
+    /* Gold - Today's Bible */
+    body.theme-gold {
+        --bg: #0f0f12;
+        --surface: #1a1a1d;
+        --surface-alt: #242429;
+        --text: #e8e6e3;
+        --text-muted: #b3b0ad;
+        --text-hover: #1a1a1d;
+        --border: rgba(255,255,255,0.08);
+
+        --theme-accent: #d4a017;
+        --theme-accent-dark: #b58900;
+        --theme-accent-light: #f0c14d;           /* Light Gold */
+        --theme-glass: rgba(212, 160, 23, 0.62);
+        --theme-border: rgba(255, 200, 80, 0.4);
+        --theme-button: rgba(255, 255, 255, 0.18);
+        --theme-button-border: rgba(255, 220, 100, 0.3);
+        --theme-highlight-bg: rgba(212, 160, 23, 0.35);
+        --theme-highlight-border: #d4a017;
+        --theme-highlight-glow: rgba(212, 160, 23, 0.4);
+        --theme-verseno: #d4a017;
+    }
+
+    /* Brown - Bible Underground */
+    body.theme-brown {
+        --bg: #1a120b;
+        --surface: #2a1f15;
+        --surface-alt: #3d2e1f;
+        --text: #f5e8d3;
+        --text-muted: #c4a484;
+        --text-hover: #1a120b;
+        --border: rgba(139, 90, 43, 0.30);
+
+        --theme-accent: #a67c52;           /* Main brown from the screenshot bar */
+        --theme-accent-dark: #8b5a2b;
+        --theme-accent-light: #c4a484;     /* Lighter tan/brown */
+        --theme-glass: rgba(166, 124, 82, 0.38);
+        --theme-border: rgba(166, 124, 82, 0.48);
+        --theme-button: rgba(166, 124, 82, 0.22);
+        --theme-button-border: rgba(166, 124, 82, 0.45);
+        --theme-highlight-bg: rgba(166, 124, 82, 0.28);
+        --theme-highlight-border: #a67c52;
+        --theme-highlight-glow: rgba(166, 124, 82, 0.45);
+        --theme-verseno: #c4a484;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+    }
+
+    /* Tab Bar */
+    .tab-bar {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 2000;
+        display: flex;
+        background: var(--theme-glass);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--theme-border);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        padding-top: env(safe-area-inset-top); /* For modern phones */
+    }
+
+    .tab {
+        flex: 1;
+        padding: 16px 0;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        border-bottom: 3px solid transparent;
+    }
+
+    .tab.active {
+        border-bottom: 3px solid var(--theme-accent);
+        background: var(--theme-glass);
+    }
+
+    .tab-content {
+        display: none;
+        padding-top: 0px;
+        padding-bottom: 80px;
+    }
+
+    .tab-content.active { display: block; }
+
+    /* Reader needs extra top space for header */
+    #reader.tab-content { padding-top: 135px; }
+
+    /* Other tabs only need space for tab bar */
+    #daily.tab-content,
+    #search.tab-content,
+    #help.tab-content { padding-top: 75px; }
+
+    /* Reader Header */
+    .main-header {
+        position: fixed;
+        top: 55px; left: 0; right: 0;
+        z-index: 1300;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        background: var(--theme-glass);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--theme-border);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Daily */
+    .daily-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .daily-header button, .daily-header input {
+        padding: 10px 14px;
+        font-size: 1.05em;
+        background: var(--theme-button);
+        border: 1px solid var(--theme-button-border);
+        border-radius: 10px;
+        color: white;
+    }
+
+    /* Search */
+    .search-top-bar {
+        position: fixed;
+        top: 55px;
+        left: 0;
+        right: 0;
+        z-index: 1200;
+        padding: 14px 20px;
+        background: rgba(35, 35, 42, 0.3);     /* same as your Daily 0.3 */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--theme-border);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .search-title {
+        font-size: 1.6em;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        text-align: center;
+    }
+
+    .search-input-area {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .search-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    #searchInput {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1.1em;
+        background: var(--surface-alt);
+        border: 1px solid var(--theme-border);
+        border-radius: 12px;
+        color: white;
+        box-sizing: border-box;
+    }
+
+    #search .search-container {
+        padding-top: 210px; 
+        max-width: 700px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .search-result {
+        background: var(--surface);
+        padding: 10px 24px;
+        margin: 18px auto;
+        max-width: 900px;
+        border-radius: 12px;
+    }
+
+    .verse-ref {
+        color: var(--theme-accent);
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: block;
+        font-size: 1.1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: var(--white);
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+        color: var(--white);
+        font-size: 1.8em;
+        margin-top: 2.5em;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--accent);
+    }
+
+    /* Help tab top buttons */
+    .help-top-bar {
+        position: fixed;
+        top: 55px;
+        left: 0;
+        right: 0;
+        z-index: 1200;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 20px 8px;
+        background: var(--theme-glass);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--theme-border);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .help-btn {
+        padding: 10px 22px;
+        font-size: 1.05em;
+        font-weight: 600;
+        color: white;
+        background: var(--theme-button);
+        border: 1px solid var(--theme-button-border);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .help-btn:hover {
+        background: var(--theme-accent);
+        color: var(--text-hover);
+    }
+
+    .help-btn.active {
+        background: var(--theme-accent);
+        color: var(--text-hover);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+
+    /* Help content area */
+    .help-content {
+        padding-top: 40px;   /* space for tab bar + help buttons */
+        padding-bottom: 0px;
+    }
+
+    .help-section {
+        display: none;
+    }
+
+    .help-section.active {
+        display: block;
+    }
+
+    /* ==================== FIXED HEADER ==================== */
+
+    .header-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+        padding: 0 4px;
+    }
+
+    .main-header h1 {
+        margin: 0 0 10px 0;
+        font-size: 1.6em;
+        color: var(--white);
+    }
+
+    .dropdowns {
+        display: flex;
+        gap: 12px;
+    }
+
+    /* Content */
+    #chapterContent, #dailyContent {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 35px 50px;
+        background: var(--surface);
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        line-height: 1.95;
+        font-size: 1.18em;
+    }
+
+    .verseno { font-weight: 700; color: var(--theme-verseno); margin-right: 10px; }
+    .verse-highlight {
+        background: var(--theme-highlight-bg);
+        border-left: 4px solid var(--theme-highlight-border);
+        border-radius: 6px;
+        padding: 4px 8px;
+        box-shadow: 0 0 12px var(--theme-highlight-glow);
+    }
+
+
+    /* ==================== NAV BUTTONS & DROPDOWNS (Gold Glass Theme) ==================== */
+    #prevChapter, #nextChapter,
+    .tts-button, #settingsTTS {
+        padding: 10px 14px;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #fff;
+        background: var(--theme-button);
+        border: 1px solid var(--theme-button-border);
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        backdrop-filter: blur(4px);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    #prevChapter:hover:not(:disabled), #nextChapter:hover:not(:disabled),
+    .tts-button:hover:not(:disabled), #settingsTTS:hover, .daily-play-btn:hover {
+        background: var(--theme-accent);
+        color: var(--text-hover);
+        box-shadow: 0 6px 20px rgba(212,160,23,0.5);
+    }
+
+    #prevChapter:active:not(:disabled), #nextChapter:active:not(:disabled),
+    .tts-button:active:not(:disabled), #settingsTTS:active {
+        background: var(--theme-accent-dark) !important;
+        transform: translateY(0);
+    }
+
+    #prevChapter:disabled, #nextChapter:disabled,
+    .tts-button:disabled {
+        background: rgba(212,160,23,0.18);
+        color: rgba(255,255,255,0.4);
+        border-color: rgba(212,160,23,0.25);
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    /* Dropdowns in header (book/chapter selects) */
+    .dropdowns select,
+    select:not(#voiceSelect):not(#speedSelect) {
+        padding: 10px 12px;
+        font-size: 0.95em;
+        background: rgba(255,255,255,0.15);
+        color: #fff;
+        border: 1px solid rgba(255,220,100,0.35);
+        border-radius: 10px;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .dropdowns select:hover, .dropdowns select:focus,
+    select:hover:not(#voiceSelect):not(#speedSelect),
+    select:focus:not(#voiceSelect):not(#speedSelect) {
+        background: var(--theme-accent);
+        color: var(--text-hover);
+        box-shadow: 0 6px 20px rgba(212,160,23,0.5);
+    }
+
+    #dailyDate:hover {
+        background: var(--theme-accent) !important;
+        box-shadow: 0 6px 20px rgba(212,160,23,0.5);
+    }
+
+    #dailyDate:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+    }
+
+    /* ==================== TTS BOTTOM BAR ==================== */
+    .tts-controls {
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        gap: 10px;
+        background: var(--theme-glass);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--theme-border);
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.6);
+    }
+
+    .tts-button svg {
+        vertical-align: middle;
+        stroke: var(--text);
+    }
+
+    /* ==================== TTS SETTINGS PANEL ==================== */
+    .tts-settings-panel {
+        position: fixed;
+        bottom: 74px;
+        right: -400px;
+        width: 300px;
+        padding: 20px;
+        background: rgba(26,26,29,0.98);
+        backdrop-filter: blur(12px);
+        border-radius: 16px 0 0 16px;
+        border: 1px solid var(--border);
+        box-shadow: -4px 0 30px rgba(0,0,0,0.7);
+        transition: right 0.35s cubic-bezier(0.3,0.9,0.3,1);
+        z-index: 1100;
+    }
+
+    .tts-settings-panel.open { right: 0; }
+
+    .tts-settings {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .tts-settings label {
+        font-weight: 600;
+        color: var(--text);
+        font-size: 0.95em;
+    }
+
+.tts-settings select,
+#voiceSelect,
+#speedSelect {
+    padding: 10px 12px;
+    font-size: 0.95em;
+    background: rgba(255,255,255,0.15);        /* Same as main dropdowns */
+    color: #fff;
+    border: 1px solid rgba(255,220,100,0.35); /* Gold tint or adjust per theme */
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.tts-settings select:hover,
+#voiceSelect:hover,
+#speedSelect:hover,
+.tts-settings select:focus,
+#voiceSelect:focus,
+#speedSelect:focus {
+    background: var(--theme-accent);
+    color: var(--text-hover);
+    border-color: var(--theme-accent-light, var(--theme-accent));
+    box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+}
+
+    /* ==================== MISC ==================== */
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: var(--text-muted);
+    }
+
+    .update-notification {
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--accent);
+        color: #fff;
+        padding: 12px 28px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        z-index: 1300;
+        font-weight: 600;
+        display: none;
+    }
+
+    .update-notification.show { display: block; }
+
+/* ====================== DAILY READING MODE ====================== */
+    /* Daily Top Bar */
+    #daily-tab .daily-top-bar,
+    .daily-tab-content .daily-top-bar {
+        position: fixed;
+        top: 55px;
+        left: 0;
+        right: 0;
+        z-index: 1200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 12px 20px;
+        background: rgba(35, 35, 42, 0.3); 
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--theme-border);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .daily-title {
+        margin: 0;
+        font-size: 1.6em;
+        color: var(--white);
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .daily-date-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .daily-top-bar button,
+    .daily-top-bar input[type="date"] {
+        height: 46px;
+        background: rgba(30, 30, 40, 0.95) !important;
+        color: #ffffff;
+        border: 1px solid var(--theme-border);
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 1.05em;
+        backdrop-filter: blur(10px);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        min-width: 110px;
+    }
+
+    .daily-top-bar button:hover {
+        background: var(--theme-accent) !important;
+        border-color: var(--theme-accent);
+        box-shadow: 0 6px 20px rgba(212,160,23,0.5);
+    }
+
+    /* Daily Reading Area */
+    .daily-reading {
+        max-width: 780px;
+        margin: 30px auto;
+        padding: 50px 60px;
+        background: transparent !important;
+        border: none !important;
+        line-height: 1.95;
+        font-size: 1.18em !important;
+        color: var(--text-muted);
+        text-align: center;
+        text-indent: 0;
+    }
+
+    .daily-reading h2 {
+        font-size: 2.2em;
+        text-align: center;
+        margin-bottom: 40px;
+        color: var(--theme-accent);
+    }
+    .daily-reading p {
+        text-align: center;
+        margin-bottom: 2.2em;
+    }
+
+    .daily-reading .verse-highlight {
+        background-color: var(--theme-highlight-bg) !important;
+        border-left: 4px solid var(--theme-highlight-border) !important;
+        padding: 4px 10px !important;
+        margin: 14px 0 !important;
+        border-radius: 6px;
+        line-height: 1.55 !important;
+        box-shadow: 0 0 12px var(--theme-highlight-glow);
+        transition: all 0.3s ease;
+        color: #e8e6e3;
+        box-decoration-break: clone;
+    }
+
+    /* Larger font ONLY on bigger screens */
+    @media (min-width: 768px) {
+        .daily-reading .verse-highlight {
+            font-size: 1.42em !important;
+        }
+    }
+
+    /* On phones - keep normal size, just highlight */
+    @media (max-width: 767px) {
+        .daily-reading .verse-highlight {
+            font-size: 1.05em !important;   /* or remove this line completely */
+            padding: 3px 8px !important;
+        }
+    }
+
+    /* Bottom Play Bar */
+    .daily-bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1100;
+        padding: 16px;
+        background: transparent;
+        border: none;
+        text-align: center;
+    }
+
+    .daily-play-btn {
+        padding: 14px 36px;
+        font-size: 1.15em;
+        font-weight: 600;
+        background: var(--theme-accent);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    /* Verse numbers */
+    .daily-reading .verseno {
+        font-weight: 700;
+        color: var(--theme-verseno);
+        font-size: 1.05em !important;
+        vertical-align: baseline !important;
+        display: inline-block;
+        width: 2.8em;
+        text-align: right;
+    }
+
+    /* ===== Welcome Page ===== */
+    .welcome-container {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 20px 20px 50px;
+        text-align: center;
+    }
+
+    .welcome-image {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        margin-bottom: 28px;
+    }
+
+    .welcome-title {
+        font-size: 1.9em;
+        margin: 10px 0 12px;
+        color: var(--text);
+    }
+
+    .welcome-tagline {
+        font-size: 1.15em;
+        color: var(--theme-accent-light);
+        font-weight: 500;
+        max-width: 640px;
+        margin: 0 auto 18px;
+        line-height: 1.5;
+    }
+
+    .current-version {
+        display: inline-block;
+        background: var(--theme-button);
+        border: 1px solid var(--theme-button-border);
+        padding: 8px 18px;
+        border-radius: 30px;
+        font-weight: 600;
+        margin-bottom: 36px;
+        color: var(--text);
+    }
+
+    /* Version cards */
+    .version-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        margin: 10px 0 40px;
+        text-align: left;
+    }
+
+    .version-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px 22px;
+    }
+
+    .version-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.15em;
+        color: var(--theme-accent);
+    }
+
+    .version-card p {
+        margin: 0;
+        font-size: 0.98em;
+        line-height: 1.55;
+        color: var(--text-muted);
+    }
+
+    /* How to Use */
+    .how-to-use {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 22px 28px;
+        max-width: 560px;
+        margin: 0 auto 36px;
+        text-align: left;
+    }
+
+    .how-to-use h3 {
+        margin: 0 0 14px;
+        color: var(--theme-accent);
+        text-align: center;
+    }
+
+    .how-to-use ul {
+        margin: 0;
+        padding-left: 20px;
+        line-height: 1.7;
+        color: var(--text-muted);
+    }
+
+    .how-to-use li {
+        margin-bottom: 6px;
+    }
+
+    .welcome-footer-note {
+        color: var(--text-muted);
+        font-size: 0.98em;
+        max-width: 520px;
+        margin: 0 auto 20px;
+    }
+
+    .copyright {
+        font-size: 0.9em;
+        color: var(--text-muted);
+        margin-top: 10px;
+    }
+
+    /* Version selector remains the same as before */
+    .version-selector {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin: 0 auto 22px;
+        max-width: 520px;
+        flex-wrap: wrap;
+    }
+
+    .version-selector label {
+        font-weight: 600;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .version-selector select {
+        flex: 1;
+        min-width: 200px;
+        max-width: 320px;
+        padding: 12px 14px;
+        font-size: 1.05em;
+        background: var(--surface-alt);
+        color: white;
+        border: 1px solid var(--theme-border);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 500px) {
+        .version-selector {
+            flex-direction: column;
+            gap: 8px;
+        }
+        .version-selector select {
+            width: 100%;
+            max-width: 100%;
+        }
+        .welcome-title {
+            font-size: 1.6em;
+        }
+    }
+
+    .version-toast {
+        position: fixed;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%) translateY(30px);
+        background: var(--theme-accent);
+        color: white;
+        padding: 12px 28px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 1.05em;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+        z-index: 3000;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.35s ease;
+        white-space: nowrap;
+    }
+
+    .version-toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .version-toast.loading {
+        background: var(--surface-alt);
+        border: 1px solid var(--theme-border);
+    }
+
+    /* ==================== MOBILE ==================== */
+    @media (max-width: 640px) {
+        body { padding: 70px 10px 60px; }
+
+        .main-header {
+            padding: 8px !important;
+            gap: 6px !important;
+        }
+
+        #chapterContent {
+            padding: 25px 20px;
+            font-size: 1.1em;
+        }
+
+        .main-header h1 { font-size: 1.3em; }
+
+        #prevChapter, #nextChapter {
+            padding: 9px 11px !important;
+            min-width: 42px !important;
+            margin: 0 4px !important;
+        }
+
+        .dropdowns { gap: 8px !important; }
+
+        #chapterSelect {
+            max-width: 78px !important;
+            min-width: 68px !important;
+            flex: 0 0 auto !important;
+        }
+
+        #bookSelect {
+            flex: 1 !important;
+            min-width: 0;
+        }
+
+        .tts-settings-panel { width: 280px; }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+        <div class="tab" data-tab="reader">Reader</div>
+        <div class="tab" data-tab="daily">Daily</div>
+        <div class="tab" data-tab="search">Search</div>
+        <div class="tab active" data-tab="help">Help</div>
+    </div>
+
+    <!-- READER TAB -->
+    <div id="reader" class="tab-content">
+    <header id="mainHeader" class="main-header">
+        <button id="prevChapter" aria-label="Previous Chapter">&lt</button>
+        <div class="header-center">
+            <h1>Loading...</h1>
+            <div class="dropdowns">
+                <select id="bookSelect" aria-label="Select a book">
+                    <option value="">Select a Book</option>
+                </select>
+                <select id="chapterSelect" aria-label="Select a chapter"></select>
+            </div>
+        </div>
+        <button id="nextChapter" aria-label="Next Chapter">&gt</button>
+    </header>
+    <div id="chapterContent"></div>
+    <div id="ttsControls" class="tts-controls">
+        <div class="tts-buttons">
+            <button id="playTTS" class="tts-button">Play</button>
+            <button id="pauseTTS" class="tts-button" disabled>Pause</button>
+            <button id="resumeTTS" class="tts-button" disabled>Resume</button>
+            <button id="stopTTS" class="tts-button" disabled>Stop</button>
+            <button id="settingsTTS" class="tts-button" aria-label="Toggle TTS settings">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+              </button>
+        </div>
+        <div id="ttsSettingsPanel" class="tts-settings-panel">
+            <div class="tts-settings">
+                <label for="voiceSelect">Voice:</label>
+                <select id="voiceSelect"></select>
+                <label for="speedSelect">Speed:</label>
+                <select id="speedSelect">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1.0" selected>1.0x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2.0">2.0x</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy;  Copyright 2026 by Ray Geide. All rights reserved.
+    </footer>
+
+    </div>
+
+    <!-- DAILY TAB -->
+    <div id="daily" class="tab-content daily-tab-content">
+        <div class="daily-top-bar">
+            <div class="daily-title">Chapter of the Day</div>
+            <div class="daily-date-controls">
+                <button id="dailyPrev">← Previous</button>
+                <input type="date" id="dailyDate">
+                <button id="dailyNext">Next →</button>
+            </div>
+        </div>
+
+        <div id="dailyContent" class="daily-reading"></div>
+
+        <footer>
+            &copy;  Copyright 2026 by Ray Geide. All rights reserved.
+        </footer>
+
+        <!-- Bottom Play Bar -->
+        <div class="daily-bottom-bar">
+            <button id="dailyPlayButton" class="daily-play-btn">
+                ▶ Play Chapter
+            </button>
+        </div>
+    </div>
+
+    <!-- SEARCH TAB -->
+    <div id="search" class="tab-content">
+        <div class="search-top-bar">
+            <div class="search-title">Search the Breakthrough Version</div>
+            <div class="search-input-area">
+                <label class="search-label">Enter Search Term</label>
+                <input type="text" id="searchInput" placeholder="Type a word or phrase and press Enter...">
+                
+                <div style="margin:12px 0; display:flex; gap:20px; flex-wrap:wrap;">
+                    <label>
+                        <input type="checkbox" id="phraseSearch"> Phrase
+                    </label>
+                    <label>
+                        <input type="checkbox" id="exactMatch"> Exact Match
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- HELP TAB -->
+    <div id="help" class="tab-content active">
+        <!-- Top buttons -->
+        <div class="help-top-bar">
+            <button class="help-btn active" data-section="about">Welcome</button>
+            <button class="help-btn" data-section="video">Videos</button>
+            <button class="help-btn" data-section="articles">Articles</button>
+        </div>
+
+        <!-- Content sections -->
+        <div class="help-content">
+            <!-- Video section -->
+            <div id="help-video" class="help-section">
+                <div style="max-width:1100px; margin:0 auto; padding:20px;">
+                    <iframe id="videosFrame" 
+                            src="https://breakthroughversion.com/rayonthebible/videos.html" 
+                            style="width:100%; height:80vh; border:none; border-radius:12px;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Articles section (existing iframe) -->
+            <div id="help-articles" class="help-section">
+                <div style="max-width:1100px; margin:0 auto; padding:20px;">
+                    <iframe id="articlesFrame" 
+                            src="https://breakthroughversion.com/rayonthebible/biblewordsdir.html" 
+                            style="width:100%; height:80vh; border:none; border-radius:12px;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- About section -->
+            <div id="help-about" class="help-section active">
+                <div class="welcome-container">
+
+                    <!-- Version Selector -->
+                    <div class="version-selector">
+                        <label for="versionSelect">Select Bible Version</label>
+                        <select id="versionSelect">
+                            <option value="underground">Today's Bible</option>
+                            <option value="undergroundBV">Breakthrough Version</option>
+                            <option value="undergroundBKJV">Breakthrough KJV</option>
+                        </select>
+                    </div>
+
+                    <!-- Main Image -->
+                    <img src="bibleundergroundflash.jpg" 
+                        alt="Bible Underground" 
+                        class="welcome-image">
+
+                    <!-- Welcome Header -->
+                    <h2 class="welcome-title">Welcome to Bible Underground</h2>
+                    <p class="welcome-tagline">
+                        We've gone underground — past centuries of traditional wording — to bring you more accurate Bibles in the language you speak.
+                    </p>
+
+                    <p id="currentVersionText" class="current-version">
+                        Currently loaded: Today's Bible
+                    </p>
+
+                    <!-- Version Descriptions -->
+                    <div class="version-cards">
+                        <div class="version-card">
+                            <h3>Breakthrough Version</h3>
+                            <p>A literal translation of a modern compilation of Greek texts (Nestle27/UBS4).</p>
+                        </div>
+                        <div class="version-card">
+                            <h3>Breakthrough KJV</h3>
+                            <p>A literal translation of the older compilation of Greek texts closest to the KJV (Scrivener 1894).</p>
+                        </div>
+                        <div class="version-card">
+                            <h3>Today's Bible</h3>
+                            <p>The Living Breakthrough Version - a dynamic rendering of the Breakthrough Version with helps.</p>
+                        </div>
+                    </div>
+
+                    <!-- How to Use -->
+                    <div class="how-to-use">
+                        <h3>How to Use</h3>
+                        <ul>
+                            <li>Use the dropdown above to select a version.</li>
+                            <li>Go to the <strong>Reader</strong> tab to read any chapter.</li>
+                            <li>Go to the <strong>Daily</strong> tab for the chapter of the day.</li>
+                            <li>Go to the <strong>Search</strong> tab to search the current version.</li>
+                        </ul>
+                    </div>
+
+                    <p class="welcome-footer-note">
+                        Bible Underground is a free offline Bible reader featuring the Breakthrough Versions.
+                    </p>
+
+                    <p class="copyright">
+                        &copy; Copyright 2026 by Ray Geide. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="versionToast" class="version-toast"></div>
+
+    <script>
+    // ==================== BIBLE VERSION CONFIG ====================
+
+    const APP_CONFIG = {
+        version: "underground",        // Change this to switch: "breakthrough" | "bkjv" | "todays"
+        
+        versions: {
+            breakthrough: {
+                name: "Breakthrough Version",
+                bibleName: "Breakthrough Version",
+                root: "breakthrough",
+                htmlFile: "bv.html",
+                dataFile: "BV.bu.txt",
+                theme: "dodger"
+            },
+            bkjv: {
+                name: "Breakthrough KJV",
+                bibleName: "Breakthrough KJV",
+                root: "bkjv",
+                htmlFile: "bkjv.html",
+                dataFile: "BKJV.bu.txt",
+                theme: "darkblue"
+            },
+            todays: {
+                name: "Today's Bible",
+                bibleName: "Today's Bible",
+                root: "todays",
+                htmlFile: "todaysbible.html",
+                dataFile: "livingBV.bu.txt",
+                theme: "gold"
+            },
+            underground: {
+                name: "Bible Underground",
+                bibleName: "Today's Bible",
+                root: "underground",
+                htmlFile: "underground.html",
+                dataFile: "LivingBV.bu.txt",
+                theme: "brown"
+            },
+            undergroundBV: {
+                name: "Bible Underground",
+                bibleName: "Breakthrough Version",
+                root: "underground",
+                htmlFile: "underground.html",
+                dataFile: "BV.bu.txt",
+                theme: "brown"
+            },
+            undergroundBKJV: {
+                name: "Bible Underground",
+                bibleName: "Breakthrough KJV",
+                root: "underground",
+                htmlFile: "underground.html",
+                dataFile: "BKJV.bu.txt",
+                theme: "brown"
+            }
+        }
+    };
+    // ==================== VERSION SWITCHING ====================
+
+    // Restore previously selected version (only allow the three underground* keys)
+    const saved = localStorage.getItem('bu_selectedVersion');
+    if (saved && APP_CONFIG.versions[saved] && APP_CONFIG.versions[saved].root === "underground") {
+        APP_CONFIG.version = saved;
+    }
+
+    const CURRENT_VERSION = APP_CONFIG.versions[APP_CONFIG.version];
+
+    const APP_NAME     = CURRENT_VERSION.name;
+    const BIBLE_NAME   = CURRENT_VERSION.bibleName;
+    let BIBLE_FILE   = CURRENT_VERSION.dataFile;
+    const SW_NAME      = `sw-${CURRENT_VERSION.root}.js`;
+    const MANIFEST_NAME = `manifest-${CURRENT_VERSION.root}.json`;
+
+    // ==================== DATA ====================
+    const chapterCounts = {
+        'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21, 'Acts': 28,
+        'Romans': 16, 'First Corinthians': 16, 'Second Corinthians': 13,
+        'Galatians': 6, 'Ephesians': 6, 'Philippians': 4, 'Colossians': 4,
+        'First Thessalonians': 5, 'Second Thessalonians': 3, 'First Timothy': 6,
+        'Second Timothy': 4, 'Titus': 3, 'Philemon': 1, 'Hebrews': 13,
+        'James': 5, 'First Peter': 5, 'Second Peter': 3, 'First John': 5,
+        'Second John': 1, 'Third John': 1, 'Jude': 1, 'Revelation': 22
+    };
+
+    const bookOrder = [
+        'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
+        'First Corinthians', 'Second Corinthians', 'Galatians', 'Ephesians',
+        'Philippians', 'Colossians', 'First Thessalonians', 'Second Thessalonians',
+        'First Timothy', 'Second Timothy', 'Titus', 'Philemon', 'Hebrews',
+        'James', 'First Peter', 'Second Peter', 'First John', 'Second John',
+        'Third John', 'Jude', 'Revelation'
+    ];
+
+    function formatChapter(text) {
+        let result = '';
+        let verseIndex = 0;
+        const lines = text.split('\n');
+
+        for (const line of lines) {
+            if (line.startsWith('<TITLE>')) {
+                result += `<h2>${line.replace(/<\/?TITLE>/g, '')}</h2>`;
+            } else if (line.startsWith('<P>')) {
+                let paragraph = line.replace(/<\/?P>/g, '');
+                paragraph = paragraph.replace(/<SPAN class="verseno">(\d+)\s*<\/SPAN>\s*((?:[^<]|<(?:I|\/I)>)*)/gi, 
+                    (match, verseNum, verseText) => {
+                        const trimmed = (verseText || '').trim();
+                        if (trimmed) {
+                            return `<span class="verseno">${verseNum}</span><span class="verse-text" data-verse="${verseIndex++}">${trimmed}</span>`;
+                        }
+                        return '';
+                    });
+                if (paragraph.trim()) result += `<p>${paragraph}</p>`;
+            }
+        }
+        return result || '<p>Content not available.</p>';
+    }
+
+    // ==================== ADVANCED WAKE LOCK ====================
+    let wakeLock = null;
+    let noSleepVideo = null;
+
+    async function requestWakeLock() {
+        // Method 1: Standard Wake Lock (Android/Chrome)
+        try {
+            if ('wakeLock' in navigator) {
+                wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Wake Lock acquired (standard)');
+                return true;
+            }
+        } catch (err) {
+            console.warn('Standard wake lock failed:', err);
+        }
+
+        // Method 2: Video hack (works on Tizen, Smart TVs, many embedded browsers)
+        try {
+            if (!noSleepVideo) {
+                noSleepVideo = document.createElement('video');
+                noSleepVideo.src = 'data:video/mp4;base64,AAAAHGZ0eXBoZWF2...'; // tiny silent video (or host a 1-second silent mp4)
+                noSleepVideo.loop = true;
+                noSleepVideo.muted = true;
+                noSleepVideo.playsInline = true;
+                noSleepVideo.style.display = 'none';
+                document.body.appendChild(noSleepVideo);
+            }
+            await noSleepVideo.play();
+            console.log('Wake Lock acquired via video hack (Tizen friendly)');
+            return true;
+        } catch (err) {
+            console.warn('Video wake lock failed:', err);
+        }
+
+        console.warn('Could not acquire wake lock');
+        return false;
+    }
+
+    function releaseWakeLock() {
+        if (wakeLock) {
+            wakeLock.release().then(() => {
+                wakeLock = null;
+                console.log('Wake Lock released (standard)');
+            }).catch(() => {});
+        }
+        if (noSleepVideo) {
+            noSleepVideo.pause();
+            console.log('Wake Lock released via video hack');
+        }
+    }
+    
+    // ==================== SHARED TTS ====================
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    let currentTTSContainer = null;
+    let isTTSPlaying = false;
+    let isTTSPaused = false;
+    let currentUtteranceIndex = 0;
+    let utterances = [];
+    let selectedVerseIndex = -1; 
+
+    function clearHighlights(container) {
+        container.querySelectorAll('.verse-highlight').forEach(el => el.classList.remove('verse-highlight'));
+    }
+
+    function updatePlayButtons() {
+        // Reader buttons
+        const playBtn = document.getElementById('playTTS');
+        if (playBtn) playBtn.disabled = isTTSPlaying /*&& !isTTSPaused*/;
+
+        const pauseBtn = document.getElementById('pauseTTS');
+        if (pauseBtn) pauseBtn.disabled = !(isTTSPlaying && !isTTSPaused);
+
+        const resumeBtn = document.getElementById('resumeTTS');
+        if (resumeBtn) resumeBtn.disabled = !isTTSPaused;
+
+        const stopBtn = document.getElementById('stopTTS');
+        if (stopBtn) stopBtn.disabled = !isTTSPlaying;
+
+        // Daily button
+        const dailyBtn = document.getElementById('dailyPlayButton');
+        if (dailyBtn) {
+            dailyBtn.innerHTML = isTTSPlaying 
+                ? (isTTSPaused ? '▶ Resume' : '⏸ Pause') 
+                : '▶ Play Chapter';
+        }
+    }
+
+    // Shared & Reliable TTS Play Function
+    function playTextTTS(container, isDaily = false) {
+        if (!container) return;
+
+        const verseSpans = Array.from(container.querySelectorAll('span[data-verse]'));
+        if (verseSpans.length === 0) return;
+
+        let startIndex = 0;
+        if (!isDaily && selectedVerseIndex >= 0) {
+            startIndex = selectedVerseIndex;
+        }
+
+        currentTTSContainer = container;
+        utterances = [];
+        currentUtteranceIndex = 0;
+
+        // Get selected voice
+        let selectedVoice = null;
+        const voiceSelect = document.getElementById('voiceSelect');
+        if (voiceSelect && voiceSelect.value !== '') {
+            const idx = parseInt(voiceSelect.value);
+            if (window.voices && window.voices[idx]) {
+                selectedVoice = window.voices[idx];
+            }
+        }
+
+        requestWakeLock();
+
+        // === Add Title (only if starting from beginning) ===
+        if (startIndex === 0) {
+            const title = container.querySelector('h2');
+            if (title) {
+                const titleUt = new SpeechSynthesisUtterance(title.textContent);
+                if (selectedVoice) titleUt.voice = selectedVoice;
+                titleUt.rate = 0.92;
+                titleUt.realVerseIndex = -1;           // special value for title
+                utterances.push(titleUt);
+                currentUtteranceIndex = 1;  // increment to account for title
+            }
+        }
+
+        // === Add Verses ===
+        for (let i = startIndex; i < verseSpans.length; i++) {
+            const span = verseSpans[i];
+            const verseUt = new SpeechSynthesisUtterance(span.textContent.trim());
+            
+            if (selectedVoice) verseUt.voice = selectedVoice;
+            verseUt.rate = 0.95;
+
+            // Store the REAL data-verse index
+            verseUt.realVerseIndex = parseInt(span.getAttribute('data-verse'));
+
+            verseUt.onstart = () => {
+                clearHighlights(container);
+                span.classList.add('verse-highlight');
+                span.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                if (!isTTSPaused) {
+                    currentUtteranceIndex++;
+                }
+            };
+
+            utterances.push(verseUt);
+        }
+
+        // Speak chain
+        let i = 0;
+        const speakNext = () => {
+            if (i < utterances.length) {
+                window.speechSynthesis.speak(utterances[i++]);
+            } else {
+                if (isDaily) {
+                    stopAllTTS(container);
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    console.log('End of chapter reached');
+                    const currentBook = bookSelect.value;
+                    let currentChapter = parseInt(chapterSelect.value);
+                    if (currentChapter < chapterCounts[currentBook]) {
+                        currentChapter++;
+                        chapterSelect.value = currentChapter;
+                        loadChapter(currentBook, currentChapter).then(() => {
+                            currentUtteranceIndex = 0;
+                            utterances = [];
+                            playTextTTS(container, isDaily);
+                        }).catch(err => console.error('Next chapter load failed:', err));
+                    } else {
+                        const currentIndex = bookOrder.indexOf(currentBook);
+                        if (currentIndex < bookOrder.length - 1) {
+                            const nextBook = bookOrder[currentIndex + 1];
+                            bookSelect.value = nextBook;
+                            updateChapterDropdown(nextBook);
+                            chapterSelect.value = '1';
+                            loadChapter(nextBook, '1').then(() => {
+                                currentUtteranceIndex = 0;
+                                utterances = [];
+                                playTextTTS(container, isDaily);
+                            }).catch(err => console.error('Next book load failed:', err));
+                        } else {
+                            console.log('End of Bible');
+                            resetTTSControls();
+                        }
+                    }
+                }
+            }
+        };
+
+        utterances.forEach(utt => utt.onend = speakNext);
+
+        speakNext();
+        isTTSPlaying = true;
+        isTTSPaused = false;
+        updatePlayButtons();
+    }
+
+    function pauseSharedTTS() {
+        if (isTTSPlaying && !isTTSPaused) {
+            window.speechSynthesis.pause();
+            isTTSPaused = true;
+            selectedVerseIndex = -1;
+            updatePlayButtons();
+            releaseWakeLock();
+        }
+    }
+
+    function resumeSharedTTS(container) {
+        if (isAndroid) {
+            window.speechSynthesis.cancel();
+
+            if (!utterances || currentUtteranceIndex < 1 || currentUtteranceIndex >= utterances.length) {
+                console.warn('Invalid resume index:', currentUtteranceIndex);
+                currentUtteranceIndex = 0;
+            }
+
+            const utterance = utterances[currentUtteranceIndex - 1];
+
+            console.log('Resume → array index:', currentUtteranceIndex, 
+                        'realVerseIndex:', utterance.realVerseIndex);
+
+            utterance.onstart = () => {
+                clearHighlights(container);
+                const realIndex = utterance.realVerseIndex;
+                if (realIndex >= 0) {   // It's a verse
+                    const span = container.querySelector(`span[data-verse="${realIndex}"]`);
+                    if (span) {
+                        span.classList.add('verse-highlight');
+                        span.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            };
+
+            try {
+                window.speechSynthesis.speak(utterance);
+                isTTSPaused = false;
+                isTTSPlaying = true;
+                updatePlayButtons();
+                requestWakeLock();
+            } catch (err) {
+                console.error('Resume failed:', err);
+                isTTSPaused = true;
+                updatePlayButtons();
+            }
+        return;
+        } else {
+        console.log("Resuming Daily TTS");
+        isTTSPaused = false;
+        updatePlayButtons();
+        window.speechSynthesis.resume();   // Try native resume first
+        requestWakeLock();
+        return;
+        }
+    }
+
+    function stopAllTTS(container) {
+        window.speechSynthesis.cancel();
+        currentTTSContainer = null;
+        isTTSPlaying = false;
+        isTTSPaused = false;
+        selectedVerseIndex = -1;
+        updatePlayButtons();
+        clearHighlights(container);
+        releaseWakeLock();
+    }
+
+    async function loadChapter(book, chapter, highlightVerse = null) {
+        console.log('Loading chapter:', book, chapter);
+        try {
+            const response = await fetch(BIBLE_FILE, { cache: 'no-store' });
+            if (!response.ok) throw new Error(`Fetch failed: ${response.status}`);
+            const data = await response.text();
+            const chapterTitle = `<TITLE>${book} ${chapter}</TITLE>`;
+            const startIndex = data.indexOf(chapterTitle);
+            if (startIndex === -1) {
+                chapterContent.innerHTML = '<p>Chapter not found.</p>';
+                return;
+            }
+            let endIndex = data.indexOf('<TITLE>', startIndex + 1);
+            if (endIndex === -1) endIndex = data.length;
+            const chapterText = data.substring(startIndex, endIndex);
+            const formattedText = formatChapter(chapterText);
+            chapterContent.innerHTML = formattedText;
+            selectedVerseIndex = -1;
+            localStorage.setItem('lastBook', book);
+            localStorage.setItem('lastChapter', chapter);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            console.log('Scrolled to top after chapter load');
+        } catch (error) {
+            console.error('Error loading chapter:', error);
+            try {
+                const cache = await caches.open(CACHE_NAME);
+                const cachedResponse = await cache.match(BIBLE_FILE);
+                if (cachedResponse) {
+                    console.log('Serving ' + BIBLE_FILE + ' from cache');
+                    const data = await cachedResponse.text();
+                    const chapterTitle = `<TITLE>${book} ${chapter}</TITLE>`;
+                    const startIndex = data.indexOf(chapterTitle);
+                    if (startIndex === -1) {
+                        chapterContent.innerHTML = '<p>Chapter not found in cache.</p>';
+                        return;
+                    }
+                    let endIndex = data.indexOf('<TITLE>', startIndex + 1);
+                    if (endIndex === -1) endIndex = data.length;
+                    const chapterText = data.substring(startIndex, endIndex);
+                    const formattedText = formatChapter(chapterText);
+                    chapterContent.innerHTML = formattedText;
+                    selectedVerseIndex = -1;
+                    localStorage.setItem('lastBook', book);
+                    localStorage.setItem('lastChapter', chapter);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    console.log('Scrolled to top after cached chapter load');
+                } else {
+                    chapterContent.innerHTML = '<p>Offline and no cached content available. Please connect to the internet and try again.</p>';
+                }
+            } catch (cacheError) {
+                console.error('Cache access failed:', cacheError);
+                chapterContent.innerHTML = '<p>Offline and no cached content available. Please connect to the internet and try again.</p>';
+            }
+        }
+        if (highlightVerse !== null) {
+            setTimeout(() => {
+                const verseSpan = chapterContent.querySelector(`span[data-verse="${highlightVerse - 1}"]`);
+                if (verseSpan) {
+                    verseSpan.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    verseSpan.classList.add('verse-highlight');
+                    selectedVerseIndex = highlightVerse - 1;
+                }
+            }, 300);
+        }
+    }
+
+    // ==================== TAB SWITCHING ====================
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            stopAllTTS(document.getElementById('chapterContent'));
+        });
+    });
+
+    // ==================== DAILY CHAPTER ====================
+    const dailyDateInput = document.getElementById('dailyDate');
+    const dailyContent = document.getElementById('dailyContent');
+    
+
+    function getChapterForDate(date) {
+        const start = new Date('2025-01-01');
+        const diffDays = Math.floor((date - start) / (1000 * 60 * 60 * 24));
+        return (diffDays % 260) + 1;
+    }
+
+    // Voice Indicator
+    function showCurrentVoiceName(voice) {
+        const old = document.getElementById('dailyVoiceInfo');
+        if (old) old.remove();
+
+        const info = document.createElement('div');
+        info.id = 'dailyVoiceInfo';
+        info.style.cssText = 'text-align:center; font-size:0.9em; color:#88aaff; margin:15px auto 25px; padding:8px; background:rgba(0,0,0,0.5); border-radius:8px; max-width:700px;';
+        info.textContent = voice ? `Voice: ${voice.name}` : 'Using default system voice';
+        dailyContent.parentElement.insertBefore(info, dailyContent);
+    }
+
+    // ==================== DAILY PLAY BUTTON ====================
+    document.getElementById('dailyPlayButton').addEventListener('click', () => {
+        console.log("Daily Play Button Pushed");
+        // If already playing on Daily → Pause
+        if (currentTTSContainer === dailyContent && isTTSPlaying && !isTTSPaused) {
+            pauseSharedTTS();
+            return;
+        }
+
+        // If paused on Daily → Resume
+        if (currentTTSContainer === dailyContent && isTTSPaused) {
+            resumeSharedTTS(dailyContent);
+            return;
+        }
+
+        // Otherwise start fresh playback
+        console.log("Starting new Daily TTS");
+        playTextTTS(dailyContent, true);
+    });
+
+    // Load functions
+    function loadChapterForDaily(book, chapter) {
+        fetch(BIBLE_FILE, { cache: 'no-store' })
+            .then(r => r.text())
+            .then(data => {
+                const title = `<TITLE>${book} ${chapter}</TITLE>`;
+                const start = data.indexOf(title);
+                if (start === -1) return;
+
+                let end = data.indexOf('<TITLE>', start + 1);
+                if (end === -1) end = data.length;
+
+                const chapterText = data.substring(start, end);
+                dailyContent.innerHTML = formatChapter(chapterText);
+
+                // Scroll to top after loading new chapter
+                setTimeout(() => {
+                    dailyContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
+            })
+            .catch(err => console.error(err));
+    }
+
+    function loadDailyChapter() {
+        const date = new Date(dailyDateInput.value);
+        if (isNaN(date.getTime())) return;
+
+        let remaining = getChapterForDate(date);
+        for (let book of bookOrder) {
+            if (remaining <= chapterCounts[book]) {
+                loadChapterForDaily(book, remaining);
+                return;
+            }
+            remaining -= chapterCounts[book];
+        }
+    }
+
+    // Navigation
+    dailyDateInput.addEventListener('change', () => {
+        stopAllTTS(dailyContent);
+        loadDailyChapter();
+    });
+
+    document.getElementById('dailyPrev').addEventListener('click', () => {
+        stopAllTTS(dailyContent);
+        const d = new Date(dailyDateInput.value);
+        d.setDate(d.getDate() - 1);
+        dailyDateInput.value = d.toISOString().split('T')[0];
+        loadDailyChapter();
+    });
+
+    document.getElementById('dailyNext').addEventListener('click', () => {
+        stopAllTTS(dailyContent);
+        const d = new Date(dailyDateInput.value);
+        d.setDate(d.getDate() + 1);
+        dailyDateInput.value = d.toISOString().split('T')[0];
+        loadDailyChapter();
+    });
+
+    dailyDateInput.value = new Date().toISOString().split('T')[0];
+    window.addEventListener('load', loadDailyChapter);
+
+    // ====================== SEARCH ======================
+    let bibleText = '';
+
+    fetch(BIBLE_FILE).then(r => r.text()).then(text => bibleText = text);
+
+    function performSearch() {
+        if (!bibleText) return;
+
+        const input = document.getElementById('searchInput').value.trim();
+        if (input.length < 2) return;
+
+        const query = input.toLowerCase();
+        const isPhrase = document.getElementById('phraseSearch').checked;
+        const isExact = document.getElementById('exactMatch').checked;
+
+        const results = [];
+        const lines = bibleText.split('\n');
+        let totalOccurrences = 0;
+        let uniqueVerses = 0;
+        let currentRef = '';
+        let currentVerseNum = '';
+
+        for (let line of lines) {
+            // === CLEAN THE LINE BEFORE SEARCHING ===
+            let cleanLine = line
+                .replace(/<TITLE>.*?<\/TITLE>/gi, '')                    // remove titles
+                .replace(/<A NAME="[^"]+"><\/A>/gi, '')                 // remove anchors
+                .replace(/<SPAN class="verseno">.*?<\/SPAN>/gi, '')     // remove verse numbers
+                .replace(/<\/?P>/gi, ' ')                               // replace <P> with space
+                .replace(/\s+/g, ' ')                                   // normalize spaces
+                .trim();
+
+            if (!cleanLine) continue;
+
+        const lowerClean = cleanLine.toLowerCase();
+        let matchFound = false;
+        let occurrenceCount = 0;
+
+        if (isPhrase) {
+            // PHRASE SEARCH
+            const phraseRegex = isExact 
+                ? new RegExp(`\\b${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi')
+                : new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+
+            const matches = lowerClean.match(phraseRegex) || [];
+            if (matches.length > 0) {
+                matchFound = true;
+                occurrenceCount = matches.length;
+            }
+        } else {
+            // MULTI-WORD SEARCH (Default mode)
+            const words = query.split(/\s+/).filter(Boolean);
+            if (words.length === 0) continue;
+
+            let allWordsPresent = true;
+            let totalCount = 0;
+
+            for (let word of words) {
+                let regex;
+                if (isExact) {
+                    regex = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+                } else {
+                    regex = new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                }
+
+                const matches = lowerClean.match(regex) || [];
+                totalCount += matches.length;
+
+                if (matches.length === 0) {
+                    allWordsPresent = false;
+                    break;
+                }
+            }
+
+            if (allWordsPresent && totalCount > 0) {
+                matchFound = true;
+                occurrenceCount = totalCount;
+            }
+        }
+
+        if (matchFound) {
+            totalOccurrences += occurrenceCount;
+            uniqueVerses++;
+
+        let currentRef = '';
+        const refMatch = line.match(/<A NAME="([^"]+)"/i);
+        if (refMatch) currentRef = refMatch[1];
+
+        // Use cleanLine for display
+        let highlighted = cleanLine;
+
+        // Highlight logic (same as before, but on clean text)
+        const words = isPhrase ? [query] : query.split(/\s+/).filter(Boolean);
+        words.forEach(word => {
+            if (!word) return;
+            const regex = new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+            highlighted = highlighted.replace(regex, 
+                '<mark style="background:#ffeb3b; color:#000; padding:2px 4px; border-radius:3px;">$&</mark>');
+        });
+
+                results.push(`
+                    <div class="search-result" data-ref="${currentRef}" data-verse="${currentVerseNum}" style="cursor:pointer;">
+                        <span class="verse-ref">${currentRef}</span>
+                        ${highlighted}
+                    </div>
+                `);
+            }
+        }
+
+        const resultsDiv = document.getElementById('searchResults');
+        if (results.length === 0) {
+            resultsDiv.innerHTML = `<p style="text-align:center; padding:40px;">No results found for "<strong>${input}</strong>".</p>`;
+        } else {
+            resultsDiv.innerHTML = `
+                <div class="search-stats">
+                    Found <strong>${totalOccurrences}</strong> occurrence${totalOccurrences !== 1 ? 's' : ''} 
+                    in <strong>${uniqueVerses}</strong> verse${uniqueVerses !== 1 ? 's' : ''}
+                </div>
+                ${results.join('')}
+            `;
+
+            // Click handlers
+            resultsDiv.querySelectorAll('.search-result').forEach(el => {
+                el.addEventListener('click', () => {
+                    const ref = el.getAttribute('data-ref');
+                    if (!ref) return;
+
+                    const [bookChapter, versePart] = ref.split(':');
+                    const lastSpace = bookChapter.lastIndexOf(' ');
+                    const book = bookChapter.substring(0, lastSpace).trim();
+                    const chapter = parseInt(bookChapter.substring(lastSpace + 1));
+                    const verseNum = versePart ? parseInt(versePart) : 1;
+
+                    // Switch to Reader tab
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    const readerTab = document.getElementById('reader');
+                    readerTab.classList.add('active');
+                    document.querySelector('.tab[data-tab="reader"]').classList.add('active');
+
+                    // Load the exact chapter + highlight verse
+                    if (typeof loadChapter === 'function') {
+                        loadChapter(book, chapter, verseNum);
+                    } else if (typeof window.loadChapter === 'function') {
+                        window.loadChapter(book, chapter, verseNum);
+                    } else {
+                        console.error("loadChapter function not found");
+                    }
+                });
+            });
+        }
+    }
+
+    document.getElementById('searchInput').addEventListener('keyup', e => {
+        if (e.key === 'Enter') {
+            performSearch();
+            e.target.blur();   // ← this hides the keyboard on Android
+        }
+    });
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register(SW_NAME, { updateViaCache: 'none' })
+                .then(reg => {
+                    console.log(`Service Worker registered for ${APP_NAME}`);
+                    reg.update();
+                })
+                .catch(err => console.error('Service Worker registration failed:', err));
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const bookSelect = document.getElementById('bookSelect');
+        const chapterSelect = document.getElementById('chapterSelect');
+        const chapterContent = document.getElementById('chapterContent');
+        const prevChapterBtn = document.getElementById('prevChapter');
+        const nextChapterBtn = document.getElementById('nextChapter');
+        const playTTSBtn = document.getElementById('playTTS');
+        const pauseTTSBtn = document.getElementById('pauseTTS');
+        const resumeTTSBtn = document.getElementById('resumeTTS');
+        const stopTTSBtn = document.getElementById('stopTTS');
+//        const voiceSelect = document.getElementById('voiceSelect');
+        const speedSelect = document.getElementById('speedSelect');
+        const settingsTTSBtn = document.getElementById('settingsTTS');
+        const ttsSettingsPanel = document.getElementById('ttsSettingsPanel');
+
+        // Set dynamic app name everywhere it appears
+        function setText(selector, text) {
+            const el = document.querySelector(selector);
+            if (el) el.textContent = text;
+        }
+
+        // Usage:
+        setText('#mainHeader h1', APP_NAME);
+        setText('.search-title', `Search the ${APP_NAME}`);
+
+        // Dynamically set manifest
+        function setManifest() {
+            // Remove any existing manifest link
+            document.querySelectorAll('link[rel="manifest"]').forEach(link => link.remove());
+
+            const manifestLink = document.createElement('link');
+            manifestLink.rel = 'manifest';
+            manifestLink.href = MANIFEST_NAME;   // e.g. manifest-breakthrough.json
+            document.head.appendChild(manifestLink);
+        }
+
+        // Call it
+        setManifest();
+
+                settingsTTSBtn.addEventListener('click', function() {
+            ttsSettingsPanel.classList.toggle('open');
+            console.log('TTS settings panel toggled:', ttsSettingsPanel.classList.contains('open') ? 'Open' : 'Closed');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!ttsSettingsPanel.contains(event.target) && !settingsTTSBtn.contains(event.target) && ttsSettingsPanel.classList.contains('open')) {
+                ttsSettingsPanel.classList.remove('open');
+                console.log('TTS settings panel closed (clicked outside)');
+            }
+        });
+
+        let voices = [];
+        let selectedVoiceIndex = localStorage.getItem('selectedVoiceIndex') || '';
+
+        const lastBook = localStorage.getItem('lastBook') || 'Matthew';
+        const lastChapter = localStorage.getItem('lastChapter') || '1';
+        console.log('Initializing with book:', lastBook, 'chapter:', lastChapter, 'isAndroid:', isAndroid);
+        bookOrder.forEach(book => {
+            const option = document.createElement('option');
+            option.value = book;
+            option.textContent = book;
+            bookSelect.appendChild(option);
+        });
+        bookSelect.value = lastBook;
+        updateChapterDropdown(lastBook);
+        chapterSelect.value = lastChapter;
+        loadChapter(lastBook, lastChapter).catch(err => console.error('Initial load failed:', err));
+        updateButtonStates();
+
+        const savedSpeed = localStorage.getItem('selectedSpeed') || '1.0';
+        speedSelect.value = savedSpeed;
+        console.log('Restored speed:', savedSpeed);
+
+        function populateVoices() {
+            voices = window.speechSynthesis.getVoices();
+            console.log('Voices loaded:', voices.length);
+
+            voiceSelect.innerHTML = '<option value="">Default Voice</option>';
+            voices.forEach((voice, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `${voice.name} (${voice.lang})`;
+                voiceSelect.appendChild(option);
+            });
+
+            // Restore saved voice
+            if (selectedVoiceIndex !== '' && voices[selectedVoiceIndex]) {
+                voiceSelect.value = selectedVoiceIndex;
+                console.log('Restored voice:', voices[selectedVoiceIndex].name);
+            } else {
+                selectedVoiceIndex = '';
+                voiceSelect.value = '';
+            }
+        }
+
+        function waitForVoices(callback) {
+            if (window.speechSynthesis.getVoices().length > 0) {
+                populateVoices();
+                callback();
+            } else {
+                window.speechSynthesis.onvoiceschanged = () => {
+                    populateVoices();
+                    window.speechSynthesis.onvoiceschanged = null;
+                    callback();
+                };
+                window.speechSynthesis.getVoices();
+            }
+        }
+
+        waitForVoices(() => {
+            console.log('Initial voice population complete');
+            // Make available to Daily
+            window.voices = voices;
+            window.selectedVoiceIndex = selectedVoiceIndex;
+        });
+
+        // Voice change handler
+        voiceSelect.addEventListener('change', function() {
+            selectedVoiceIndex = this.value;
+            localStorage.setItem('selectedVoiceIndex', selectedVoiceIndex);
+            window.selectedVoiceIndex = selectedVoiceIndex;
+            window.voices = voices;
+            console.log('Voice changed to:', voices[selectedVoiceIndex]?.name);
+        });
+
+        speedSelect.addEventListener('change', function() {
+            const speed = this.value;
+            localStorage.setItem('selectedSpeed', speed);
+            console.log('Speed selected:', speed);
+        });
+
+        bookSelect.addEventListener('change', function() {
+            const book = this.value;
+            console.log('Book selected:', book);
+            chapterSelect.innerHTML = '<option value="">Select a Chapter</option>';
+            chapterContent.innerHTML = '';
+            chapterSelect.disabled = !book;
+            stopTTS();
+            if (book) {
+                updateChapterDropdown(book);
+                chapterSelect.value = '1';
+                loadChapter(book, '1').catch(err => console.error('Load chapter failed:', err));
+            }
+            updateButtonStates();
+        });
+
+        chapterSelect.addEventListener('change', function() {
+            const book = bookSelect.value;
+            const chapter = this.value;
+            console.log('Chapter selected:', book, chapter);
+            if (book && chapter) {
+                loadChapter(book, chapter).catch(err => console.error('Load chapter failed:', err));
+                stopTTS();
+            }
+            updateButtonStates();
+        });
+
+        prevChapterBtn.addEventListener('click', function() {
+            const book = bookSelect.value;
+            let chapter = parseInt(chapterSelect.value);
+            if (!book || !chapter) return;
+            stopTTS();
+            if (chapter > 1) {
+                chapter--;
+                chapterSelect.value = chapter;
+                loadChapter(book, chapter).catch(err => console.error('Load chapter failed:', err));
+            } else {
+                const currentIndex = bookOrder.indexOf(book);
+                if (currentIndex > 0) {
+                    const prevBook = bookOrder[currentIndex - 1];
+                    chapter = chapterCounts[prevBook];
+                    bookSelect.value = prevBook;
+                    updateChapterDropdown(prevBook);
+                    chapterSelect.value = chapter;
+                    loadChapter(prevBook, chapter).catch(err => console.error('Load chapter failed:', err));
+                }
+            }
+            updateButtonStates();
+        });
+
+        nextChapterBtn.addEventListener('click', function() {
+            const book = bookSelect.value;
+            let chapter = parseInt(chapterSelect.value);
+            if (!book || !chapter) return;
+            stopTTS();
+            if (chapter < chapterCounts[book]) {
+                chapter++;
+                chapterSelect.value = chapter;
+                loadChapter(book, chapter).catch(err => console.error('Load chapter failed:', err));
+            } else {
+                const currentIndex = bookOrder.indexOf(book);
+                if (currentIndex < bookOrder.length - 1) {
+                    const nextBook = bookOrder[currentIndex + 1];
+                    chapter = 1;
+                    bookSelect.value = nextBook;
+                    updateChapterDropdown(nextBook);
+                    chapterSelect.value = chapter;
+                    loadChapter(nextBook, chapter).catch(err => console.error('Load chapter failed:', err));
+                }
+            }
+            updateButtonStates();
+        });
+
+        function playTTS() {
+            console.log('playTTS called');
+            const book = bookSelect.value;
+            const chapter = chapterSelect.value;
+
+            if (!book || !chapter) {
+                alert('Please select a book and chapter.');
+                return;
+            }
+            playTextTTS(chapterContent, false);   // false = not Daily
+        }
+
+        function pauseTTS() {
+            console.log('pauseTTS called, speaking:', window.speechSynthesis.speaking, 'paused:', window.speechSynthesis.paused);
+            pauseSharedTTS();
+        }
+
+        function resumeTTS() {
+            console.log('resumeTTS called, paused:', window.speechSynthesis.paused);
+            resumeSharedTTS(chapterContent);
+        }
+
+        function stopTTS() {
+            console.log('stopTTS called');
+            stopAllTTS(chapterContent);
+        }
+
+        function getVerses() {
+            const verses = [];
+            const spans = chapterContent.querySelectorAll('span[data-verse]');
+            console.log('Found span[data-verse] elements:', spans.length, 'for book:', bookSelect?.value || 'undefined', 'chapter:', chapterSelect?.value || 'undefined');
+            spans.forEach((span, index) => {
+                const verseNumber = span.previousSibling && span.previousSibling.classList.contains('verseno') 
+                    ? span.previousSibling.textContent.trim() 
+                    : '';
+                const verseText = span.textContent.trim();
+                console.log(`Verse ${index}: Number=${verseNumber}, Text=${verseText.substring(0, 50)}...`);
+                if (verseText) {
+                    verses.push({ number: verseNumber, text: verseText });
+                } else {
+                    console.warn('Empty verse text for span:', index);
+                }
+            });
+            if (!verses.length) {
+                console.warn('No valid verses found');
+            }
+            return verses;
+        }
+
+        playTTSBtn.addEventListener('click', function() {
+            console.log('Play button clicked');
+            playTTS();
+        });
+
+        pauseTTSBtn.addEventListener('click', pauseTTS);
+        resumeTTSBtn.addEventListener('click', resumeTTS);
+        stopTTSBtn.addEventListener('click', stopTTS);
+
+        // Make verses clickable for selection
+        chapterContent.addEventListener('click', function(e) {
+            if (isTTSPlaying || isTTSPaused) {
+                console.log('TTS is playing or paused, ignoring verse click');
+                e.stopImmediatePropagation
+                return;
+            }
+            const verseSpan = e.target.closest('span.verse-text[data-verse]');
+            if (!verseSpan) return;
+
+            const index = parseInt(verseSpan.getAttribute('data-verse'));
+
+            // Always clear ALL previous highlights first
+            chapterContent.querySelectorAll('.verse-highlight').forEach(el => el.classList.remove('verse-highlight'));
+
+            if (selectedVerseIndex === index) {
+                // Clicked the same verse again ? deselect and stop TTS
+                stopAllTTS(chapterContent);
+            } else {
+                // Select the new verse
+                selectedVerseIndex = index;
+                verseSpan.classList.add('verse-highlight');
+                verseSpan.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            console.log('Selected verse index:', selectedVerseIndex === -1 ? 'none' : selectedVerseIndex);
+        });
+
+        function updateChapterDropdown(book) {
+            chapterSelect.innerHTML = '<option value="">Select a Chapter</option>';
+            const chapters = chapterCounts[book];
+            console.log('Updating chapters for', book, ':', chapters);
+            for (let i = 1; i <= chapters; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                chapterSelect.appendChild(option);
+            }
+            chapterSelect.disabled = false;
+        }
+
+        function updateButtonStates() {
+            const book = bookSelect.value;
+            const chapter = parseInt(chapterSelect.value);
+            prevChapterBtn.disabled = !book || (chapter === 1 && bookOrder.indexOf(book) === 0);
+            nextChapterBtn.disabled = !book || (chapter === chapterCounts[book] && bookOrder.indexOf(book) === bookOrder.length - 1);
+        }
+
+        // Make voice settings globally accessible
+        window.voices = voices;
+        window.selectedVoiceIndex = selectedVoiceIndex;
+
+        // Help tab section switching
+        document.querySelectorAll('.help-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.help-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Show the correct section
+                const section = btn.dataset.section;
+                document.querySelectorAll('.help-section').forEach(s => s.classList.remove('active'));
+                document.getElementById(`help-${section}`).classList.add('active');
+            });
+        });
+
+        // ----- Version dropdown on About page -----
+        const versionSelect = document.getElementById('versionSelect');
+        if (versionSelect) {
+            versionSelect.value = APP_CONFIG.version;
+
+            function updateLabels() {
+                const cur = APP_CONFIG.versions[APP_CONFIG.version];
+
+                // Header
+                const headerTitle = document.querySelector('#mainHeader h1');
+                if (headerTitle) {
+                    headerTitle.textContent = `${cur.name} – ${cur.bibleName}`;
+                }
+
+                // Search title
+                const searchTitle = document.querySelector('.search-title');
+                if (searchTitle) {
+                    searchTitle.textContent = `Search the ${cur.bibleName}`;
+                }
+
+                // About page text
+                const versionText = document.getElementById('currentVersionText');
+                if (versionText) {
+                    versionText.textContent = `Currently loaded: ${cur.bibleName}`;
+                }
+            }
+
+            updateLabels();   // initial
+
+            versionSelect.addEventListener('change', function () {
+                const newKey = this.value;
+                if (!APP_CONFIG.versions[newKey]) return;
+
+                const cur = APP_CONFIG.versions[newKey];
+                const toast = document.getElementById('versionToast');
+
+                // Show loading feedback immediately
+                toast.textContent = `Loading ${cur.bibleName}...`;
+                toast.classList.add('show', 'loading');
+                versionSelect.disabled = true;          // prevent double-clicks
+
+                APP_CONFIG.version = newKey;
+                localStorage.setItem('bu_selectedVersion', newKey);
+                BIBLE_FILE = cur.dataFile;
+
+                updateLabels();
+
+                fetch(BIBLE_FILE)
+                    .then(r => {
+                        if (!r.ok) throw new Error('Network response was not ok');
+                        return r.text();
+                    })
+                    .then(text => {
+                        bibleText = text;
+                        console.log('Loaded', cur.bibleName, BIBLE_FILE);
+
+                        // Reload Reader
+                        const book = document.getElementById('bookSelect')?.value || 'Matthew';
+                        const chapter = document.getElementById('chapterSelect')?.value || '1';
+                        if (typeof loadChapter === 'function') {
+                            loadChapter(book, chapter);
+                        }
+
+                        // Reload Daily
+                        if (typeof loadDailyChapter === 'function') {
+                            loadDailyChapter();
+                        }
+
+                        // Success feedback
+                        toast.textContent = `Now using ${cur.bibleName}`;
+                        toast.classList.remove('loading');
+
+                        // Hide toast after 2 seconds
+                        setTimeout(() => {
+                            toast.classList.remove('show');
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        toast.textContent = 'Failed to load version';
+                        toast.classList.remove('loading');
+                        setTimeout(() => toast.classList.remove('show'), 2500);
+                    })
+                    .finally(() => {
+                        versionSelect.disabled = false;
+                    });
+            });
+        }
+    });
+
+    // Apply theme
+    document.body.className = `theme-${CURRENT_VERSION.theme}`;
+    document.title = APP_NAME;
+
+    </script>
+</body>
+</html>

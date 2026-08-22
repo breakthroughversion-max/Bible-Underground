@@ -11,10 +11,11 @@ We've gone underground — escaping centuries of traditional wording — to brin
 ## Contents
 - `/texts/` – Full Bible text files
 - `/lexicon/` – Greek lexicon / dictionary
-- `/apps/` – Offline web-based Bible readers
+- `/apps/` – Offline web-based Bible reader and Greek lexicon
 
 ## Online Readers
 - Combined reader: https://breakthroughversion.com/underground.html
+- Lexicon: https://todaysbible.online/lexicon.html
 - Main website: https://breakthroughversion.com
 
 ## License

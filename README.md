@@ -1,24 +1,52 @@
 # Bible-Underground
-Repository for the **Breakthrough Versions** of the New Testament and related tools by Ray Geide.
 
-We've gone underground — escaping centuries of traditional wording — to bring you a more accurate Bible in the language you speak. We have three New Testaments (Breakthrough Version, Breakthrough KJV, and Today's Bible - a living Breakthrough Version) and a Greek lexicon (Today's Greek Dictionary).
+Open repository for the **Breakthrough Versions** of the New Testament, Greek lexicon, and offline web readers.
+
+Created by Ray Geide.
+
+## Live Reader
+
+**Bible Underground (all three versions)**  
+→ [Open the live reader](https://breakthroughversion-max.github.io/Bible-Underground/apps/combined-reader/underground.html)
 
 ## The Three Versions
-- **Breakthrough Version (BV)** – High-definition literal translation of the modern critical Greek text (Nestle-Aland 27 / UBS4)
-- **Breakthrough KJV (BKJV)** – High-definition literal translation based on the Textus Receptus tradition
-- **Today's Bible (TB)** – The Living Breakthrough Version (dynamic rendering with helps)
 
-## Contents
-- `/texts/` – Full Bible text files
-- `/lexicon/` – Greek lexicon / dictionary
-- `/apps/` – Offline web-based Bible reader and Greek lexicon
+- **Breakthrough Version (BV)**  
+  High-definition literal translation of the modern critical Greek text (Nestle-Aland 27 / UBS4)
 
-## Online Readers
-- Combined reader: https://breakthroughversion.com/underground.html
-- Lexicon: https://todaysbible.online/lexicon.php
-- Main website: https://breakthroughversion.com
+- **Breakthrough KJV (BKJV)**  
+  High-definition literal translation based on the Textus Receptus tradition
 
-## License
-Copyright © 2026 Ray Geide. All rights reserved.  
+- **Today's Bible (LivingBV)**  
+  The Living Breakthrough Version – a dynamic rendering with helps
+
+All three are original translations by Ray Geide.
+
+## Repository Contents
+
+| Folder / File              | Description |
+|---------------------------|-----------|
+| [`texts/`](texts/)        | Full text files of the three Bible versions |
+| [`lexicon/`](lexicon/)    | Complete Greek lexicon (JSON) with Strong’s numbers, definitions, and traditional sources |
+| [`apps/combined-reader/`](apps/combined-reader/) | Offline-capable web reader (Bible Underground) |
+
+## Greek Lexicon
+
+Full export of **Today's Greek Dictionary** in JSON format.  
+Includes original definitions plus Dodson, Mounce, Strong’s, and Thayer for comparison.
+
+→ [View the lexicon folder](lexicon/)
+
+## Copyright
+
+Copyright © Ray Geide. All rights reserved.
+
+The Breakthrough Version, Breakthrough KJV, Today's Bible texts, lexicon, and related materials are original works.  
 Free for personal study and non-commercial use.  
-See the LICENSE file for full terms.
+Redistribution, modification, or commercial use requires written permission.
+
+## Links
+
+- Main website: [https://breakthroughversion.com](https://breakthroughversion.com)
+- Online lexicon: [https://todaysbible.online/lexicon.php](https://todaysbible.online/lexicon.php)
+- Translator’s articles & videos available on the main site

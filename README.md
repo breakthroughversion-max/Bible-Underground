@@ -15,7 +15,7 @@ We've gone underground — escaping centuries of traditional wording — to brin
 
 ## Online Readers
 - Combined reader: https://breakthroughversion.com/underground.html
-- Lexicon: https://todaysbible.online/lexicon.html
+- Lexicon: https://todaysbible.online/lexicon.php
 - Main website: https://breakthroughversion.com
 
 ## License

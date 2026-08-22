@@ -7,6 +7,7 @@ Redistribution, modification, or commercial use requires written permission.
 
 Website: https://breakthroughversion.com
 -->
+
 <VERSION NUMBER="5.00" DATE="12/25/2025">
 <TITLE>Matthew 1</TITLE>
 <P><A NAME="Matthew 1:1"></A><SPAN class="verseno">1 </SPAN><I>This is</I> a scroll of birth history, <I>a genealogy</I> of Jesus, the Anointed King, a son of David, a son of Abraham.</P>

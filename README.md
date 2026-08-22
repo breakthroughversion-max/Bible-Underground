@@ -1,5 +1,5 @@
 # Bible-Underground
-We've gone underground. After throwing out the traditional wording, we are concentrating on the Greek to bring you more accurate Bibles in the language you speak. We have three New Testaments (Breakthrough Version, Breakthrough KJV, and Today's Bible - a living Breakthrough Version) and a Greek lexicon.
+We've gone underground — escaping centuries of traditional wording — to bring you a more accurate Bible in the language you speak. We have three New Testaments (Breakthrough Version, Breakthrough KJV, and Today's Bible - a living Breakthrough Version) and a Greek lexicon (Today's Greek Dictionary).
 
 Repository for the **Breakthrough Versions** of the New Testament and related tools by Ray Geide.
 

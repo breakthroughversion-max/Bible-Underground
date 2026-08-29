@@ -149,8 +149,9 @@
 
     /* Other tabs only need space for tab bar */
     #daily.tab-content,
-    #search.tab-content,
-    #help.tab-content { padding-top: 75px; }
+    #search.tab-content { padding-top: 75px; }
+
+    #help.tab-content { padding-top: 110px; }
 
     /* Reader Header */
     .main-header {
@@ -753,6 +754,14 @@
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 20px 22px;
+        transition: all 0.25s ease;
+    }
+
+    .version-card.active {
+        background: var(--theme-highlight-bg);
+        border: 2px solid var(--theme-highlight-border);
+        box-shadow: 0 0 16px var(--theme-highlight-glow);
+        transform: translateY(-2px);
     }
 
     .version-card h3 {
@@ -1046,7 +1055,6 @@
             <div id="help-video" class="help-section">
                 <div style="max-width:1100px; margin:0 auto; padding:20px;">
                     <iframe id="videosFrame" 
-                            src="https://breakthroughversion.com/rayonthebible/videos.html" 
                             style="width:100%; height:80vh; border:none; border-radius:12px;">
                     </iframe>
                 </div>
@@ -1093,17 +1101,17 @@
 
                     <!-- Version Descriptions -->
                     <div class="version-cards">
-                        <div class="version-card">
+                        <div class="version-card" data-version="undergroundBV">
                             <h3>Breakthrough Version</h3>
-                            <p>A literal translation of a modern compilation of Greek texts (Nestle27/UBS4).</p>
+                            <p>A literal translation of a modern compilation of Greek texts.</p>
                         </div>
-                        <div class="version-card">
+                        <div class="version-card" data-version="undergroundBKJV">
                             <h3>Breakthrough KJV</h3>
-                            <p>A literal translation of the older compilation of Greek texts closest to the KJV (Scrivener 1894).</p>
+                            <p>A literal translation of the older compilation of Greek texts closest to the KJV.</p>
                         </div>
-                        <div class="version-card">
+                        <div class="version-card" data-version="underground">
                             <h3>Today's Bible</h3>
-                            <p>The Living Breakthrough Version - a dynamic rendering of the Breakthrough Version with helps.</p>
+                            <p>A living version of the Breakthrough Version with helps.</p>
                         </div>
                     </div>
 
@@ -1841,17 +1849,42 @@
                     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
                     
-                    const readerTab = document.getElementById('reader');
-                    readerTab.classList.add('active');
+                    document.getElementById('reader').classList.add('active');
                     document.querySelector('.tab[data-tab="reader"]').classList.add('active');
 
-                    // Load the exact chapter + highlight verse
+                    if (bookSelect && chapterSelect) {
+                        // Set the book
+                        bookSelect.value = book;
+
+                        // Rebuild the chapter dropdown for that book
+                        chapterSelect.innerHTML = '<option value="">Select a Chapter</option>';
+                        const chapters = chapterCounts[book] || 1;
+                        for (let i = 1; i <= chapters; i++) {
+                            const option = document.createElement('option');
+                            option.value = i;
+                            option.textContent = i;
+                            chapterSelect.appendChild(option);
+                        }
+                        chapterSelect.disabled = false;
+                        chapterSelect.value = chapter;
+
+                        // Update Previous / Next button states
+                        if (typeof updateButtonStates === 'function') {
+                            updateButtonStates();
+                        } else {
+                            // Fallback if updateButtonStates is scoped inside DOMContentLoaded
+                            const prevBtn = document.getElementById('prevChapter');
+                            const nextBtn = document.getElementById('nextChapter');
+                            if (prevBtn && nextBtn) {
+                                prevBtn.disabled = (chapter === 1 && bookOrder.indexOf(book) === 0);
+                                nextBtn.disabled = (chapter === chapterCounts[book] && bookOrder.indexOf(book) === bookOrder.length - 1);
+                            }
+                        }
+                    }
+
+                    // Load the chapter and highlight the verse
                     if (typeof loadChapter === 'function') {
                         loadChapter(book, chapter, verseNum);
-                    } else if (typeof window.loadChapter === 'function') {
-                        window.loadChapter(book, chapter, verseNum);
-                    } else {
-                        console.error("loadChapter function not found");
                     }
                 });
             });
@@ -2200,6 +2233,15 @@
                 const section = btn.dataset.section;
                 document.querySelectorAll('.help-section').forEach(s => s.classList.remove('active'));
                 document.getElementById(`help-${section}`).classList.add('active');
+                const videosFrame = document.getElementById('videosFrame');
+                if (videosFrame) {
+                    if (section === 'video') {
+                        // Load the video page only when needed
+                        if (!videosFrame.src || videosFrame.src === '' || videosFrame.src === window.location.href) {
+                            videosFrame.src = 'https://breakthroughversion.com/rayonthebible/videos.html';
+                        }
+                    }
+                }
             });
         });
 
@@ -2227,6 +2269,16 @@
                 const versionText = document.getElementById('currentVersionText');
                 if (versionText) {
                     versionText.textContent = `Currently loaded: ${cur.bibleName}`;
+                }
+
+                // Highlight the matching card
+                document.querySelectorAll('.version-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+
+                const activeCard = document.querySelector(`.version-card[data-version="${APP_CONFIG.version}"]`);
+                if (activeCard) {
+                    activeCard.classList.add('active');
                 }
             }
 

@@ -934,10 +934,10 @@
 
     <!-- Tab Bar -->
     <div class="tab-bar">
-        <div class="tab" data-tab="reader">Reader</div>
+        <div class="tab" data-tab="reader">Bible</div>
         <div class="tab" data-tab="daily">Daily</div>
         <div class="tab" data-tab="search">Search</div>
-        <div class="tab active" data-tab="help">Help</div>
+        <div class="tab" data-tab="help">Help</div>
     </div>
 
     <!-- READER TAB -->
@@ -1044,7 +1044,7 @@
     <div id="help" class="tab-content active">
         <!-- Top buttons -->
         <div class="help-top-bar">
-            <button class="help-btn active" data-section="about">Welcome</button>
+            <button class="help-btn" data-section="about">Welcome</button>
             <button class="help-btn" data-section="video">Videos</button>
             <button class="help-btn" data-section="articles">Articles</button>
         </div>
@@ -1120,7 +1120,7 @@
                         <h3>How to Use</h3>
                         <ul>
                             <li>Use the dropdown above to select a version.</li>
-                            <li>Go to the <strong>Reader</strong> tab to read any chapter.</li>
+                            <li>Go to the <strong>Bible</strong> tab to read any chapter.</li>
                             <li>Go to the <strong>Daily</strong> tab for the chapter of the day.</li>
                             <li>Go to the <strong>Search</strong> tab to search the current version.</li>
                         </ul>
@@ -1211,6 +1211,13 @@
     let BIBLE_FILE   = CURRENT_VERSION.dataFile;
     const SW_NAME      = `sw-${CURRENT_VERSION.root}.js`;
     const MANIFEST_NAME = `manifest-${CURRENT_VERSION.root}.json`;
+
+    // First-run detection – unique per app
+    const launchKey = `${CURRENT_VERSION.root}_hasLaunched`;
+    const hasLaunchedBefore = localStorage.getItem(launchKey);
+    if (!hasLaunchedBefore) {
+        localStorage.setItem(launchKey, 'true');
+    }
 
     // ==================== DATA ====================
     const chapterCounts = {
@@ -1720,8 +1727,9 @@
     function performSearch() {
         if (!bibleText) return;
 
-        const input = document.getElementById('searchInput').value.trim();
-        if (input.length < 2) return;
+        const inputEl = document.getElementById('searchInput');
+        const input = inputEl.value.trim();
+        if (input.length < 1) return;
 
         const query = input.toLowerCase();
         const isPhrase = document.getElementById('phraseSearch').checked;
@@ -1731,89 +1739,87 @@
         const lines = bibleText.split('\n');
         let totalOccurrences = 0;
         let uniqueVerses = 0;
-        let currentRef = '';
-        let currentVerseNum = '';
 
         for (let line of lines) {
-            // === CLEAN THE LINE BEFORE SEARCHING ===
+            // Aggressive cleaning – remove ALL HTML tags and normalize
             let cleanLine = line
-                .replace(/<TITLE>.*?<\/TITLE>/gi, '')                    // remove titles
-                .replace(/<A NAME="[^"]+"><\/A>/gi, '')                 // remove anchors
-                .replace(/<SPAN class="verseno">.*?<\/SPAN>/gi, '')     // remove verse numbers
-                .replace(/<\/?P>/gi, ' ')                               // replace <P> with space
-                .replace(/\s+/g, ' ')                                   // normalize spaces
+                .replace(/<[^>]+>/g, ' ')          // strip every HTML tag
+                .replace(/&nbsp;/gi, ' ')
+                .replace(/\s+/g, ' ')
                 .trim();
 
-            if (!cleanLine) continue;
+            if (!cleanLine || cleanLine.length < 3) continue;
 
-        const lowerClean = cleanLine.toLowerCase();
-        let matchFound = false;
-        let occurrenceCount = 0;
+            const lowerClean = cleanLine.toLowerCase();
+            let matchFound = false;
+            let occurrenceCount = 0;
 
-        if (isPhrase) {
-            // PHRASE SEARCH
-            const phraseRegex = isExact 
-                ? new RegExp(`\\b${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi')
-                : new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+            if (isPhrase) {
+                const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const phraseRegex = isExact
+                    ? new RegExp(`\\b${escaped}\\b`, 'gi')
+                    : new RegExp(escaped, 'gi');
 
-            const matches = lowerClean.match(phraseRegex) || [];
-            if (matches.length > 0) {
-                matchFound = true;
-                occurrenceCount = matches.length;
-            }
-        } else {
-            // MULTI-WORD SEARCH (Default mode)
-            const words = query.split(/\s+/).filter(Boolean);
-            if (words.length === 0) continue;
+                const matches = lowerClean.match(phraseRegex) || [];
+                if (matches.length > 0) {
+                    matchFound = true;
+                    occurrenceCount = matches.length;
+                }
+            } else {
+                // Multi-word search
+                const words = query.split(/\s+/).filter(w => w.length > 0);
+                if (words.length === 0) continue;
 
-            let allWordsPresent = true;
-            let totalCount = 0;
+                let allPresent = true;
+                let totalCount = 0;
 
-            for (let word of words) {
-                let regex;
-                if (isExact) {
-                    regex = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
-                } else {
-                    regex = new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                for (let word of words) {
+                    const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = isExact || word.length <= 2   // force exact for very short words
+                        ? new RegExp(`\\b${escaped}\\b`, 'gi')
+                        : new RegExp(escaped, 'gi');
+
+                    const matches = lowerClean.match(regex) || [];
+                    totalCount += matches.length;
+
+                    if (matches.length === 0) {
+                        allPresent = false;
+                        break;
+                    }
                 }
 
-                const matches = lowerClean.match(regex) || [];
-                totalCount += matches.length;
-
-                if (matches.length === 0) {
-                    allWordsPresent = false;
-                    break;
+                if (allPresent && totalCount > 0) {
+                    matchFound = true;
+                    occurrenceCount = totalCount;
                 }
             }
 
-            if (allWordsPresent && totalCount > 0) {
-                matchFound = true;
-                occurrenceCount = totalCount;
-            }
-        }
+            if (matchFound) {
+                totalOccurrences += occurrenceCount;
+                uniqueVerses++;
 
-        if (matchFound) {
-            totalOccurrences += occurrenceCount;
-            uniqueVerses++;
+                // Get reference
+                let currentRef = '';
+                const refMatch = line.match(/<A NAME="([^"]+)"/i);
+                if (refMatch) currentRef = refMatch[1];
 
-        let currentRef = '';
-        const refMatch = line.match(/<A NAME="([^"]+)"/i);
-        if (refMatch) currentRef = refMatch[1];
+                // Highlight – always use word boundaries for short words
+                let highlighted = cleanLine;
+                const wordsToHighlight = isPhrase ? [query] : query.split(/\s+/).filter(Boolean);
 
-        // Use cleanLine for display
-        let highlighted = cleanLine;
+                wordsToHighlight.forEach(word => {
+                    if (!word) return;
+                    const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = (isExact || word.length <= 2)
+                        ? new RegExp(`\\b(${escaped})\\b`, 'gi')
+                        : new RegExp(`(${escaped})`, 'gi');
 
-        // Highlight logic (same as before, but on clean text)
-        const words = isPhrase ? [query] : query.split(/\s+/).filter(Boolean);
-        words.forEach(word => {
-            if (!word) return;
-            const regex = new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-            highlighted = highlighted.replace(regex, 
-                '<mark style="background:#ffeb3b; color:#000; padding:2px 4px; border-radius:3px;">$&</mark>');
-        });
+                    highlighted = highlighted.replace(regex,
+                        '<mark style="background:#ffeb3b; color:#000; padding:2px 4px; border-radius:3px;">$1</mark>');
+                });
 
                 results.push(`
-                    <div class="search-result" data-ref="${currentRef}" data-verse="${currentVerseNum}" style="cursor:pointer;">
+                    <div class="search-result" data-ref="${currentRef}" style="cursor:pointer;">
                         <span class="verse-ref">${currentRef}</span>
                         ${highlighted}
                     </div>
@@ -1833,7 +1839,7 @@
                 ${results.join('')}
             `;
 
-            // Click handlers
+            // Click handlers (keep your existing improved version that updates the dropdowns)
             resultsDiv.querySelectorAll('.search-result').forEach(el => {
                 el.addEventListener('click', () => {
                     const ref = el.getAttribute('data-ref');
@@ -1845,50 +1851,48 @@
                     const chapter = parseInt(bookChapter.substring(lastSpace + 1));
                     const verseNum = versePart ? parseInt(versePart) : 1;
 
-                    // Switch to Reader tab
+                    // Switch to Reader
                     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                    
                     document.getElementById('reader').classList.add('active');
                     document.querySelector('.tab[data-tab="reader"]').classList.add('active');
 
+                    // Update dropdowns + buttons
+                    const bookSelect = document.getElementById('bookSelect');
+                    const chapterSelect = document.getElementById('chapterSelect');
                     if (bookSelect && chapterSelect) {
-                        // Set the book
                         bookSelect.value = book;
-
-                        // Rebuild the chapter dropdown for that book
                         chapterSelect.innerHTML = '<option value="">Select a Chapter</option>';
                         const chapters = chapterCounts[book] || 1;
                         for (let i = 1; i <= chapters; i++) {
-                            const option = document.createElement('option');
-                            option.value = i;
-                            option.textContent = i;
-                            chapterSelect.appendChild(option);
+                            const opt = document.createElement('option');
+                            opt.value = i;
+                            opt.textContent = i;
+                            chapterSelect.appendChild(opt);
                         }
                         chapterSelect.disabled = false;
                         chapterSelect.value = chapter;
 
-                        // Update Previous / Next button states
                         if (typeof updateButtonStates === 'function') {
                             updateButtonStates();
-                        } else {
-                            // Fallback if updateButtonStates is scoped inside DOMContentLoaded
-                            const prevBtn = document.getElementById('prevChapter');
-                            const nextBtn = document.getElementById('nextChapter');
-                            if (prevBtn && nextBtn) {
-                                prevBtn.disabled = (chapter === 1 && bookOrder.indexOf(book) === 0);
-                                nextBtn.disabled = (chapter === chapterCounts[book] && bookOrder.indexOf(book) === bookOrder.length - 1);
-                            }
                         }
                     }
 
-                    // Load the chapter and highlight the verse
                     if (typeof loadChapter === 'function') {
                         loadChapter(book, chapter, verseNum);
                     }
                 });
             });
         }
+
+        // Scroll results into view (see fix #3)
+        setTimeout(() => {
+            const container = document.querySelector('.search-container');
+            if (container) {
+                const y = container.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+            }
+        }, 50);
     }
 
     document.getElementById('searchInput').addEventListener('keyup', e => {
@@ -2244,6 +2248,27 @@
                 }
             });
         });
+
+        // Open on Welcome the very first time, Reader after that
+        if (!hasLaunchedBefore) {
+            // Force Help / Welcome
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelector('.tab[data-tab="help"]').classList.add('active');
+            document.getElementById('help').classList.add('active');
+
+            // Make sure Welcome section is shown
+            document.querySelectorAll('.help-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('.help-btn[data-section="about"]')?.classList.add('active');
+            document.querySelectorAll('.help-section').forEach(s => s.classList.remove('active'));
+            document.getElementById('help-about')?.classList.add('active');
+        } else {
+            // Subsequent launches → Reader
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelector('.tab[data-tab="reader"]').classList.add('active');
+            document.getElementById('reader').classList.add('active');
+        }
 
         // ----- Version dropdown on About page -----
         const versionSelect = document.getElementById('versionSelect');

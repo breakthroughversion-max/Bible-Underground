@@ -925,7 +925,7 @@ document.getElementById('open-nt-popup')?.addEventListener('click', () => {
     doc.write('<script>');
     doc.write('const bookName="' + book.replace(/"/g, '\\"') + '";');
     doc.write('const chapterNum="' + chapter + '";');
-    doc.write('const url="opengnt_books/"+bookName.toLowerCase().replace(/ /g,"_")+".json";');
+    doc.write('const url="data/opengnt/"+bookName.toLowerCase().replace(/ /g,"_")+".json";');
     doc.write('fetch(url).then(r=>{if(!r.ok)throw new Error("Book file not found");return r.json();})');
     doc.write('.then(allWords=>{const content=document.getElementById("chapterContent");content.innerHTML="";');
     doc.write('const chapterWords=allWords.filter(w=>w.chapter==chapterNum);const verses={};');

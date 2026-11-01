@@ -1,0 +1,1000 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="lexiconmanifest.json">
+    <title>Today's Greek Dictionary by Ray Geide</title>
+    <meta name="theme-color" content="#0c2d5a">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .form-container { margin-bottom: 20px; }
+        .error { color: red; }
+        .success { color: green; }
+        label { display: block; margin: 10px 0; }
+        input, textarea, select { width: 100%; padding: 10px; }
+        textarea { height: 100px; }
+        .history-buttons { margin: 10px 0; display: flex; gap: 10px; }
+        .history-buttons button { padding: 8px 12px; }
+        .bible-ref { color: blue; text-decoration: underline; cursor: pointer; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; }
+        .modal-content { background-color: white; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 5px; }
+        .modal-content i { font-style: italic; }
+        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close:hover { color: black; }
+        .view-edit-header { display: flex; align-items: center; gap: 10px; }
+        .view-edit-header h3 { white-space: nowrap; }
+        .copyright { text-align: center; margin-top: 20px; font-size: 14px; }
+        .references-div { min-height: 100px; border: 1px solid #ddd; padding: 10px; border-radius: 4px; white-space: pre-wrap; }
+        .source-info { text-align: right; font-size: 0.8em; color: #666; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; }
+        .source-info a { color: #007bff; text-decoration: none; }
+        .source-info a:hover { text-decoration: underline; }
+        .custom-dropdown { position: relative; width: 100%; max-width: 600px; }
+        .dropdown-list { background: white; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .dropdown-item { display: flex; align-items: center; padding: 8px; cursor: pointer; gap: 10px; }
+        .dropdown-item .strong-number { width: 80px; flex-shrink: 0; }
+        .dropdown-item .greek-word { width: 150px; flex-shrink: 0; }
+        .dropdown-item .translation { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .dropdown-item:hover { background-color: #f0f0f0; }
+        .dropdown-item.selected { background-color: #d0e8ff; font-weight: bold; }
+        .nt-lookup-section select, .nt-lookup-section button { padding: 8px; margin-right: 10px; }
+        .nt-lookup-section h4 { margin-bottom: 8px; }
+        #search_term { width: 300px; max-width: 100%; }
+        #search_term, #btn-search {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 15px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+        #loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 9999;
+            cursor: wait;
+        }
+        #loading-overlay > div {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 0 0 10px black;
+        }
+        .strong-ref {
+            color: #1d4ed8;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .strong-ref:hover { background-color: #dbeafe; }
+        #strong-tooltip {
+            display: none;
+            position: absolute;
+            max-width: 340px;
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.3;
+            z-index: 10000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            pointer-events: none;
+            white-space: pre-wrap;
+        }
+        #strong-tooltip .tt-strong { font-weight: bold; color: #93c5fd; margin-bottom: 2px; }
+        #strong-tooltip .tt-greek { color: #86efac; margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+<div id="loading-overlay" style="display:block;">
+    <div>Loading dictionary...</div>
+</div>
+
+<!-- Header -->
+<div style="margin-bottom: 12px;">
+    <style>
+    .howto-link {
+        position: relative;
+        display: inline-block;
+        font-size: 0.95rem;
+        text-decoration: underline;
+        cursor: pointer;
+        color: #555;
+    }
+    .howto-link .tooltip {
+        visibility: hidden;
+        width: 290px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        border-radius: 6px;
+        padding: 10px 12px;
+        position: absolute;
+        z-index: 100;
+        top: 130%;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.2s;
+        font-size: 0.9rem;
+        line-height: 1.45;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .howto-link .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 18px;
+        border-width: 6px;
+        border-style: solid;
+        border-color: transparent transparent #333 transparent;
+    }
+    .howto-link:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+    </style>
+
+    <a href="our-translation-goals.html" class="howto-link">
+    How we translate
+    <span class="tooltip">
+        This lexicon follows a set of ten translation goals designed to produce clear, consistent, modern English renderings of the Greek.<br><br>
+        ↑ Click above link to view our 10 Translation goals
+    </span>
+    </a>
+</div>
+<div style="display:flex; align-items:center; gap:15px; margin-bottom:15px; flex-wrap:wrap;">
+    <img src="greek-dict-icon-1080tran.png" alt="Today's Greek Dictionary" style="height:100px; width:auto; flex-shrink:0;">
+    <div>
+        <div class="history-buttons" style="margin:0 0 20px 0;">
+            <button id="btn-back" disabled>Back</button>
+            <button id="btn-forward" disabled>Forward</button>
+        </div>
+        <h2 style="margin:0;">Today's Greek Dictionary</h2>
+    </div>
+</div>
+
+<!-- Main tools (search + NT + dropdown) – hidden when viewing a record -->
+<div id="main-tools">
+    <summary style="font-size:1.2em; font-weight:bold; cursor:pointer; padding:10px; background:#f8f9fa; border:1px solid #ddd; border-radius:4px;">
+        Search & Lookup Tools
+    </summary>
+    <div style="padding:15px; border:1px solid #ddd; border-top:none; border-radius:0 0 4px 4px;">
+
+        <!-- Search -->
+        <details id="details-search-dictionary" open>
+            <summary>Search Dictionary</summary>
+            <div style="padding:10px 0;">
+                <label for="search_term"><strong>Search term:</strong></label>
+                <input type="text" id="search_term" style="width:300px; max-width:100%;">
+                <button id="btn-search">Search</button>
+            </div>
+        </details>
+
+        <!-- NT Lookup -->
+        <details id="details-look-up">
+            <summary>Find a Greek word in the New Testament</summary>
+            <div style="padding:10px 0;">
+                <div class="nt-lookup-section">
+                    <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+                        <div>
+                            <label for="nt-book">Book:</label>
+                            <select id="nt-book">
+                                <option value="Matthew">Matthew</option>
+                                <option value="Mark">Mark</option>
+                                <option value="Luke">Luke</option>
+                                <option value="John">John</option>
+                                <option value="Acts">Acts</option>
+                                <option value="Romans">Romans</option>
+                                <option value="1 Corinthians">1 Corinthians</option>
+                                <option value="2 Corinthians">2 Corinthians</option>
+                                <option value="Galatians">Galatians</option>
+                                <option value="Ephesians">Ephesians</option>
+                                <option value="Philippians">Philippians</option>
+                                <option value="Colossians">Colossians</option>
+                                <option value="1 Thessalonians">1 Thessalonians</option>
+                                <option value="2 Thessalonians">2 Thessalonians</option>
+                                <option value="1 Timothy">1 Timothy</option>
+                                <option value="2 Timothy">2 Timothy</option>
+                                <option value="Titus">Titus</option>
+                                <option value="Philemon">Philemon</option>
+                                <option value="Hebrews">Hebrews</option>
+                                <option value="James">James</option>
+                                <option value="1 Peter">1 Peter</option>
+                                <option value="2 Peter">2 Peter</option>
+                                <option value="1 John">1 John</option>
+                                <option value="2 John">2 John</option>
+                                <option value="3 John">3 John</option>
+                                <option value="Jude">Jude</option>
+                                <option value="Revelation">Revelation</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="nt-chapter">Chapter:</label>
+                            <select id="nt-chapter">
+                                <option value="" disabled selected>Select chapter</option>
+                            </select>
+                        </div>
+                        <div style="align-self:flex-end;">
+                            <button id="open-nt-popup">Open Chapter Viewer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Greek Word Lookup -->
+        <details id="details-select-greek-word" style="margin-top:25px;">
+            <summary>Greek Word Lookup</summary>
+            <div style="padding:10px 0;">
+                <div id="record_select" class="custom-dropdown">
+                    <div class="dropdown-list" id="dropdown-list" style="max-height:150px; overflow-y:auto; border:1px solid #ddd; padding:10px;">
+                        <!-- filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- Search Results -->
+<div id="search-results-container" style="display:none; margin-top:20px;">
+    <h3>Search Results</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Strong Number</th>
+                <th>Greek Word</th>
+                <th>Translation</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="search-results-body"></tbody>
+    </table>
+</div>
+
+<!-- View Record -->
+<div id="view-record" style="display:none;"></div>
+
+<!-- Verse Modal -->
+<div id="verseModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="verseReference"></h2>
+        <p id="verseText"></p>
+        <p id="verseSource" class="source-info"></p>
+    </div>
+</div>
+
+<div id="strong-tooltip"></div>
+
+<p class="copyright">
+    &copy; Copyright by Ray Geide. All rights reserved.<br>
+    <small>Lexicon definitions from Thayer (1889), Strong's (1890), Mounce (2009), and Dodson (2010) are public domain or used under permissive/open terms.</small>
+</p>
+
+<script>
+/* ============================================================
+   GLOBAL STATE
+   ============================================================ */
+let lexiconData = [];
+let dataById = {};
+let dataByStrong = {};
+let navHistory = [];
+let navHistoryIndex = -1;
+
+const ntChapters = {
+    "Matthew":28,"Mark":16,"Luke":24,"John":21,"Acts":28,
+    "Romans":16,"1 Corinthians":16,"2 Corinthians":13,"Galatians":6,"Ephesians":6,
+    "Philippians":4,"Colossians":4,"1 Thessalonians":5,"2 Thessalonians":3,"1 Timothy":6,
+    "2 Timothy":4,"Titus":3,"Philemon":1,"Hebrews":13,"James":5,
+    "1 Peter":5,"2 Peter":3,"1 John":5,"2 John":1,"3 John":1,
+    "Jude":1,"Revelation":22
+};
+
+const bibleInfo = {
+    livingbv: { name: "Today's Bible", url: "https://todaysbible.online" },
+    bv:       { name: "Breakthrough Version", url: "https://breakthroughversion.com" },
+    bkjv:     { name: "Breakthrough KJV", url: "https://breakthroughversion.com" }
+};
+
+const BOOK_CODES = {
+    Mat: 'Matthew', Mar: 'Mark', Luk: 'Luke', Joh: 'John', Act: 'Acts',
+    Rom: 'Romans', '1Co': 'First Corinthians', '2Co': 'Second Corinthians',
+    Gal: 'Galatians', Eph: 'Ephesians', Php: 'Philippians', Col: 'Colossians',
+    '1Th': 'First Thessalonians', '2Th': 'Second Thessalonians',
+    '1Ti': 'First Timothy', '2Ti': 'Second Timothy', Tit: 'Titus', Phm: 'Philemon',
+    Heb: 'Hebrews', Jas: 'James', '1Pe': 'First Peter', '2Pe': 'Second Peter',
+    '1Jn': 'First John', '2Jn': 'Second John', '3Jn': 'Third John', Jud: 'Jude', Rev: 'Revelation'
+};
+
+// Paths relative to index.html — adjust if your folder layout differs
+const BIBLE_FILES = {
+    livingbv: 'LivingBV.bu.txt',
+    bv:       'BV.bu.txt',
+    bkjv:     'BKJV.bu.txt'
+};
+
+const bibleCache = {};  // { livingbv: { 'Matthew 1:1': 'html...', ... }, ... }
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+function normalizeStrong(s) {
+    if (!s) return '';
+    s = String(s).toUpperCase().replace(/[^GH0-9A-Z]/g, '');
+    if (!/^[GH]/.test(s)) s = 'G' + s;
+    return s.replace(/^([GH])0+([1-9]\d*.*)$/i, '$1$2');
+}
+
+function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+function processEtymology(text) {
+    if (!text) return '';
+    let escaped = escapeHtml(text);
+    escaped = escaped.replace(/\b([G]\d+[A-Za-z]*)\b/gi,
+        '<span class="strong-ref" data-strong="$1">$1</span>');
+    return escaped.replace(/\n/g, '<br>');
+}
+
+function showLoading(show = true) {
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) overlay.style.display = show ? 'block' : 'none';
+    document.body.style.cursor = show ? 'wait' : 'default';
+}
+
+/* ============================================================
+   LOAD JSON
+   ============================================================ */
+async function loadDictionary() {
+    try {
+        const resp = await fetch('greek-data-nopt.json');
+        if (!resp.ok) throw new Error('Could not load greek-data-nopt.json');
+        lexiconData = await resp.json();
+
+        lexiconData.forEach(rec => {
+            dataById[rec.id] = rec;
+            const sn = normalizeStrong(rec.strong_number);
+            dataByStrong[sn] = rec;
+            dataByStrong[(rec.strong_number || '').toUpperCase()] = rec;
+        });
+
+        // Sort by Strong number numeric part
+        lexiconData.sort((a, b) => {
+            const na = parseInt((a.strong_number || 'G0').replace(/^[GH]/i, '')) || 0;
+            const nb = parseInt((b.strong_number || 'G0').replace(/^[GH]/i, '')) || 0;
+            return na - nb;
+        });
+
+        buildDropdown();
+        showLoading(false);
+        handleUrl();
+    } catch (err) {
+        console.error(err);
+        document.getElementById('loading-overlay').innerHTML =
+            '<div style="color:white;text-align:center;padding:20px;">Error loading dictionary.<br>' +
+            escapeHtml(err.message) + '</div>';
+    }
+}
+
+/* ============================================================
+   DROPDOWN
+   ============================================================ */
+function buildDropdown() {
+    const list = document.getElementById('dropdown-list');
+    list.innerHTML = '';
+    lexiconData.forEach(rec => {
+        const div = document.createElement('div');
+        div.className = 'dropdown-item';
+        div.dataset.recordId = rec.id;
+        div.innerHTML = `
+            <span class="strong-number">${escapeHtml(rec.strong_number || '')}</span>
+            <span class="greek-word">${escapeHtml(rec.greek_word || '')}</span>
+            <span class="translation" title="${escapeHtml(rec.definition || '')}">
+                ${escapeHtml((rec.definition || '').substring(0, 50))}${(rec.definition || '').length > 50 ? '...' : ''}
+            </span>`;
+        div.addEventListener('click', () => selectRecord(rec.id));
+        list.appendChild(div);
+    });
+}
+
+function highlightDropdown(term) {
+    const list = document.getElementById('dropdown-list');
+    list.querySelectorAll('.dropdown-item').forEach(el => el.classList.remove('selected'));
+    const target = normalizeStrong(term);
+    if (!target) return;
+    const rec = dataByStrong[target];
+    if (!rec) return;
+    const item = list.querySelector(`.dropdown-item[data-record-id="${rec.id}"]`);
+    if (item) {
+        item.classList.add('selected');
+        // auto-open details and scroll
+        const details = document.getElementById('details-select-greek-word');
+        if (details) details.open = true;
+        setTimeout(() => item.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 200);
+    }
+}
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+function doSearch(term, addToHistory = true) {
+    term = (term || '').trim();
+    if (!term) return;
+
+    if (addToHistory) {
+        pushNav({ type: 'search', term });
+    }
+
+    const lower = term.toLowerCase();
+    const numeric = (term.match(/\d+/) || [])[0];
+
+    const results = lexiconData.filter(rec => {
+        const fields = [
+            rec.strong_number, rec.greek_word, rec.definition,
+            rec.pronunciation, rec.part_of_speech, rec.etymology,
+            rec.kjv_terms, rec.references_list, rec.comments,
+            rec.dodson, rec.mounce, rec.strongs, rec.thayer
+        ].map(f => (f || '').toLowerCase());
+
+        if (numeric) {
+            return fields.some(f => f.includes(numeric));
+        }
+        return fields.some(f => f.includes(lower));
+    }).slice(0, 250);
+
+    // UI
+    document.getElementById('main-tools').style.display = 'block';
+    document.getElementById('view-record').style.display = 'none';
+    const container = document.getElementById('search-results-container');
+    const tbody = document.getElementById('search-results-body');
+    tbody.innerHTML = '';
+
+    if (results.length === 0) {
+        container.style.display = 'block';
+        tbody.innerHTML = '<tr><td colspan="4">No results found.</td></tr>';
+    } else {
+        container.style.display = 'block';
+        results.forEach(rec => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${escapeHtml(rec.strong_number || '')}</td>
+                <td>${escapeHtml(rec.greek_word || '')}</td>
+                <td title="${escapeHtml(rec.definition || '')}">
+                    ${escapeHtml((rec.definition || '').substring(0, 50))}${(rec.definition || '').length > 50 ? '...' : ''}
+                </td>
+                <td><a href="#" class="view-link" data-id="${rec.id}">View</a></td>`;
+            tbody.appendChild(tr);
+        });
+        tbody.querySelectorAll('.view-link').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                selectRecord(a.dataset.id);
+            });
+        });
+    }
+
+    highlightDropdown(term);
+    updateHistoryButtons();
+    history.replaceState({ type: 'search', term }, '', `?search_term=${encodeURIComponent(term)}`);
+}
+
+/* ============================================================
+   VIEW RECORD
+   ============================================================ */
+function selectRecord(id, addToHistory = true) {
+    const rec = dataById[id];
+    if (!rec) return;
+
+    if (addToHistory) {
+        pushNav({ type: 'view', id: String(id) });
+    }
+
+    document.getElementById('main-tools').style.display = 'none';
+    document.getElementById('search-results-container').style.display = 'none';
+
+    const view = document.getElementById('view-record');
+    view.style.display = 'block';
+    view.innerHTML = `
+        <div class="view-edit-header"><h3>View Record</h3></div>
+
+        <details open>
+            <summary style="font-size:1.1em; font-weight:bold; cursor:pointer; padding:10px; background:#f8f9fa; border:1px solid #ddd; border-radius:6px;">
+                Core Information
+            </summary>
+            <div style="padding:12px; border:1px solid #ddd; border-top:none; border-radius:0 0 6px 6px;">
+                <p style="margin:0 0 8px 0; line-height:1.5;">
+                    <strong>Strong Number:</strong> ${escapeHtml(rec.strong_number || '')}&nbsp;&nbsp;
+                    <strong>Greek Word:</strong> ${escapeHtml(rec.greek_word || '')}&nbsp;&nbsp;
+                    <strong>Transliteration:</strong> ${escapeHtml(rec.transliteration || '')}&nbsp;&nbsp;
+                    <strong>Pronunciation:</strong> ${escapeHtml(rec.pronunciation || '')}
+                </p>
+                <p style="margin:0 0 12px 0;"><strong>Part of Speech:</strong> ${escapeHtml(rec.part_of_speech || '')}</p>
+                ${rec.etymology ? `<p style="margin:0 0 12px 0;"><strong>Etymology:</strong> ${processEtymology(rec.etymology)}</p>` : ''}
+                <p><strong>Today's Bible (2026):</strong><br>${escapeHtml(rec.definition || '').replace(/\n/g, '<br>')}</p>
+                ${rec.comments ? `<p><strong>Comments:</strong><br>${escapeHtml(rec.comments).replace(/\n/g, '<br>')}</p>` : ''}
+
+                <p style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:12px 0 4px 0;">
+                    <strong>References List:</strong>
+                    <select id="bible-version" style="width:auto; max-width:260px; padding:5px 10px;">
+                        <option value="livingbv">Today's Bible</option>
+                        <option value="bv">Breakthrough Version</option>
+                        <option value="bkjv">Breakthrough KJV</option>
+                    </select>
+                </p>
+                <p style="margin:0;"><span id="references_label">${escapeHtml(rec.references_list || '')}</span></p>
+            </div>
+        </details>
+
+        <details style="margin-top:20px;">
+            <summary style="font-size:1.1em; font-weight:bold; cursor:pointer; padding:10px; background:#f8f9fa; border:1px solid #ddd; border-radius:6px;">
+                Other Sources
+            </summary>
+            <div style="padding:15px; border:1px solid #ddd; border-top:none; border-radius:0 0 6px 6px;">
+                ${sourceBlock('Dodson (2010)', rec.dodson)}
+                ${sourceBlock('Mounce (2009)', rec.mounce)}
+                ${sourceBlock("Strong's (1890)", rec.strongs)}
+                ${sourceBlock('Thayer (1889)', rec.thayer)}
+                ${sourceBlock('KJV (1769)', rec.kjv_terms)}
+            </div>
+        </details>
+    `;
+
+    // Bible preference
+    const sel = document.getElementById('bible-version');
+    if (sel) {
+        sel.value = localStorage.getItem('lexicon_bible_version') || 'livingbv';
+        sel.addEventListener('change', () => {
+            localStorage.setItem('lexicon_bible_version', sel.value);
+        });
+    }
+
+    makeReferencesClickable('references_label');
+    updateHistoryButtons();
+    history.replaceState({ type: 'view', id }, '', `?id=${id}`);
+}
+
+function sourceBlock(title, text) {
+    if (!text) return '';
+    return `
+        <details style="margin:8px 0;">
+            <summary style="font-weight:bold; cursor:pointer;">${title}</summary>
+            <div style="padding:10px 0;">${escapeHtml(text).replace(/\n/g, '<br>')}</div>
+        </details>`;
+}
+
+/* ============================================================
+   HISTORY
+   ============================================================ */
+function sameNavEntry(a, b) {
+    if (!a || !b || a.type !== b.type) return false;
+    if (a.type === 'search') return a.term === b.term;
+    if (a.type === 'view') return String(a.id) === String(b.id);
+    return false;
+}
+
+function pushNav(entry) {
+    const current = navHistoryIndex >= 0 ? navHistory[navHistoryIndex] : null;
+    // Skip consecutive identical items
+    if (sameNavEntry(current, entry)) {
+        updateHistoryButtons();
+        return;
+    }
+    // Drop any "forward" branch
+    navHistory = navHistory.slice(0, navHistoryIndex + 1);
+    navHistory.push(entry);
+    if (navHistory.length > 40) {
+        navHistory.shift();
+        // index stays at end after shift of oldest
+    }
+    navHistoryIndex = navHistory.length - 1;
+    updateHistoryButtons();
+}
+
+function showHome() {
+    document.getElementById('view-record').style.display = 'none';
+    document.getElementById('search-results-container').style.display = 'none';
+    document.getElementById('main-tools').style.display = 'block';
+    history.replaceState({ type: 'home' }, '', 'lexicon.html');
+    updateHistoryButtons();
+}
+
+function applyNavEntry(entry) {
+    if (!entry) {
+        showHome();
+        return;
+    }
+    if (entry.type === 'search') {
+        document.getElementById('search_term').value = entry.term;
+        doSearch(entry.term, false);
+    } else if (entry.type === 'view') {
+        selectRecord(entry.id, false);
+    }
+}
+
+function updateHistoryButtons() {
+    document.getElementById('btn-back').disabled = (navHistoryIndex < 0);
+    document.getElementById('btn-forward').disabled =
+        (navHistoryIndex >= navHistory.length - 1);
+}
+
+document.getElementById('btn-back').addEventListener('click', () => {
+    if (navHistoryIndex < 0) return;
+
+    if (navHistoryIndex === 0) {
+        // Leave first history item → home
+        navHistoryIndex = -1;
+        showHome();
+        return;
+    }
+
+    navHistoryIndex--;
+    applyNavEntry(navHistory[navHistoryIndex]);
+    updateHistoryButtons();
+});
+
+document.getElementById('btn-forward').addEventListener('click', () => {
+    if (navHistoryIndex >= navHistory.length - 1) return;
+    navHistoryIndex++;
+    applyNavEntry(navHistory[navHistoryIndex]);
+    updateHistoryButtons();
+});
+
+/* ============================================================
+   REFERENCES + VERSE MODAL  (static Bible files — no PHP)
+   ============================================================ */
+function lexiconRefToAnchor(ref) {
+    // "Mat_1:1" or "1Co_11:9(TR)" → "Matthew 1:1"
+    const m = String(ref).match(/^([123]?[A-Za-z]+)_(\d+):(\d+)/);
+    if (!m) return null;
+    const book = BOOK_CODES[m[1]] || m[1];
+    return book + ' ' + m[2] + ':' + m[3];
+}
+
+function makeReferencesClickable(elementId) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    let text = el.innerHTML;
+    text = text.replace(/(\w+_\d+:\d+)/g, '<span class="bible-ref" data-ref="$1">$1</span>');
+    el.innerHTML = text;
+    el.querySelectorAll('.bible-ref').forEach(ref => {
+        ref.addEventListener('click', fetchVerse);
+    });
+}
+
+function getSelectedBible() {
+    const sel = document.getElementById('bible-version');
+    return (sel && sel.value) || localStorage.getItem('lexicon_bible_version') || 'livingbv';
+}
+
+async function loadBible(version) {
+    if (bibleCache[version]) return bibleCache[version];
+
+    const url = BIBLE_FILES[version];
+    if (!url) throw new Error('Unknown Bible version: ' + version);
+
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error('Could not load ' + url + ' (' + resp.status + ')');
+
+    const text = await resp.text();
+    const map = {};
+    const re = /<A NAME="([^"]+)"><\/A>([\s\S]*?)(?=<A NAME="|<TITLE>|$)/gi;
+    let m;
+    while ((m = re.exec(text)) !== null) {
+        const anchor = m[1]; // e.g. "Matthew 1:1"
+        let html = m[2]
+            .replace(/<SPAN class="verseno">[\s\S]*?<\/SPAN>/i, '')
+            .replace(/<\/?P>/gi, '')
+            .trim();
+        map[anchor] = html;
+    }
+    bibleCache[version] = map;
+    return map;
+}
+
+async function fetchVerse(event) {
+    const reference = event.target.getAttribute('data-ref');
+    const bible = getSelectedBible();
+    const anchor = lexiconRefToAnchor(reference);
+
+    if (!anchor) {
+        showModal(reference, 'Could not parse reference.');
+        return;
+    }
+
+    showLoading(true);
+    try {
+        const map = await loadBible(bible);
+        const verseHtml = map[anchor];
+        showLoading(false);
+
+        if (!verseHtml) {
+            showModal(anchor, 'Verse not found in this version.');
+            return;
+        }
+
+        const info = bibleInfo[bible] || bibleInfo.livingbv;
+        showModal(
+            anchor,
+            verseHtml,
+            `From ${info.name} – <a href="${info.url}" target="_blank">${info.url.replace('https://', '')}</a>`
+        );
+    } catch (err) {
+        showLoading(false);
+        showModal(reference, 'Error loading verse: ' + (err.message || err));
+    }
+}
+
+function showModal(reference, text, source = '') {
+    document.getElementById('verseReference').textContent =
+        String(reference).replace(/_/g, ' ');
+    document.getElementById('verseText').innerHTML =
+        String(text).replace(/<I>/gi, '<i>').replace(/<\/I>/gi, '</i>');
+    document.getElementById('verseSource').innerHTML = source;
+    document.getElementById('verseModal').style.display = 'block';
+}
+
+document.querySelector('.close').addEventListener('click', () => {
+    document.getElementById('verseModal').style.display = 'none';
+});
+window.addEventListener('click', e => {
+    if (e.target === document.getElementById('verseModal')) {
+        document.getElementById('verseModal').style.display = 'none';
+    }
+});
+
+/* ============================================================
+   STRONG'S TOOLTIPS + CLICK
+   ============================================================ */
+const tooltip = document.getElementById('strong-tooltip');
+const defCache = {};
+let currentHoverStrong = null;   // tracks the span we are actually over
+
+function showStrongTooltip(e, strong) {
+    if (!tooltip) return;
+
+    const key = normalizeStrong(strong);
+    currentHoverStrong = key;
+
+    if (defCache[key]) {
+        renderTooltip(e, defCache[key]);
+        return;
+    }
+
+    const rec = dataByStrong[key] || dataByStrong[String(strong).toUpperCase()];
+    const data = rec
+        ? {
+              strong_number: rec.strong_number,
+              greek_word: rec.greek_word,
+              definition: rec.definition
+          }
+        : { error: 'Not found' };
+
+    defCache[key] = data;
+
+    if (currentHoverStrong === key) {
+        renderTooltip(e, data);
+    }
+}
+
+function renderTooltip(e, data) {
+    if (!tooltip) return;
+    if (data.error) {
+        tooltip.innerHTML = data.error;
+    } else {
+        tooltip.innerHTML = `
+            <div class="tt-strong">${data.strong_number || ''}</div>
+            <div class="tt-greek">${data.greek_word || ''}</div>
+            <div>${data.definition || ''}</div>
+        `;
+    }
+    positionTooltip(e);
+    tooltip.style.display = 'block';
+}
+
+function positionTooltip(e) {
+    if (!tooltip) return;
+    tooltip.style.left = (e.clientX + 12) + 'px';
+    tooltip.style.top  = (e.clientY + 16) + 'px';
+    tooltip.style.display = 'block';
+}
+
+function hideStrongTooltip() {
+    currentHoverStrong = null;         // clear the hover tracker
+    if (tooltip) tooltip.style.display = 'none';
+}
+
+// Hover
+document.addEventListener('mouseover', function(e) {
+    const span = e.target.closest('.strong-ref');
+    if (span) {
+        showStrongTooltip(e, span.getAttribute('data-strong'));
+    }
+});
+
+document.addEventListener('mousemove', function(e) {
+    if (tooltip && tooltip.style.display === 'block' && e.target.closest('.strong-ref')) {
+        positionTooltip(e);
+    }
+});
+
+document.addEventListener('mouseout', function(e) {
+    const span = e.target.closest('.strong-ref');
+    if (span && !e.relatedTarget?.closest('.strong-ref')) {
+        hideStrongTooltip();
+    }
+});
+
+document.addEventListener('click', e => {
+    const span = e.target.closest('.strong-ref');
+    if (!span) return;
+    e.preventDefault();
+    e.stopPropagation();
+    hideStrongTooltip();
+    const strong = span.getAttribute('data-strong');
+    const key = normalizeStrong(strong);
+    const rec = dataByStrong[key];
+    if (rec) {
+        selectRecord(rec.id);
+    } else {
+        doSearch(strong);
+    }
+});
+
+/* ============================================================
+   NT CHAPTER VIEWER
+   ============================================================ */
+const bookSelect = document.getElementById('nt-book');
+const chapterSelect = document.getElementById('nt-chapter');
+
+function populateNtChapters() {
+    const book = bookSelect.value;
+    const maxCh = ntChapters[book] || 1;
+    chapterSelect.innerHTML = '';
+    for (let i = 1; i <= maxCh; i++) {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+    }
+    chapterSelect.value = 1;
+}
+
+function restoreNtSelection() {
+    const lastBook = sessionStorage.getItem('lastNtBook');
+    const lastChapter = parseInt(sessionStorage.getItem('lastNtChapter'), 10);
+    if (lastBook && bookSelect.querySelector(`option[value="${lastBook}"]`)) {
+        bookSelect.value = lastBook;
+    }
+    populateNtChapters();
+    const max = ntChapters[bookSelect.value] || 1;
+    if (!isNaN(lastChapter) && lastChapter >= 1 && lastChapter <= max) {
+        chapterSelect.value = lastChapter;
+    }
+}
+
+if (bookSelect && chapterSelect) {
+    restoreNtSelection();
+    bookSelect.addEventListener('change', () => {
+        sessionStorage.setItem('lastNtBook', bookSelect.value);
+        populateNtChapters();
+        sessionStorage.setItem('lastNtChapter', '1');
+    });
+    chapterSelect.addEventListener('change', () => {
+        sessionStorage.setItem('lastNtChapter', chapterSelect.value);
+    });
+}
+
+document.getElementById('open-nt-popup')?.addEventListener('click', () => {
+    const book = bookSelect.value;
+    const chapter = chapterSelect.value;
+    if (!book || !chapter) {
+        alert('Please select a book and chapter');
+        return;
+    }
+    const popup = window.open('', 'NTChapterViewer', 'width=800,height=600');
+    if (!popup) {
+        alert('Popup blocked. Please allow popups for this site.');
+        return;
+    }
+    const doc = popup.document;
+    doc.open();
+    doc.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">');
+    doc.write('<title>' + book + ' Chapter ' + chapter + '</title>');
+    doc.write('<style>body{font-family:Arial,sans-serif;padding:20px;line-height:1.5;font-size:18px;}h2{font-size:24px;margin-bottom:20px;}p{margin:10px 0;white-space:pre-wrap;}span.word-group{margin-right:0.8em;display:inline-flex;align-items:baseline;gap:2px;}.greek-word{color:#1d4ed8;font-weight:bold;}.strongs{color:#15803d;font-weight:500;margin-left:3px;}.morph{color:#9333ea;font-size:0.92em;margin-left:3px;}</style></head><body>');
+    doc.write('<h2>' + book + ' Chapter ' + chapter + '</h2>');
+    doc.write('<div id="chapterContent">Loading chapter...</div>');
+    doc.write('<script>');
+    doc.write('const bookName="' + book.replace(/"/g, '\\"') + '";');
+    doc.write('const chapterNum="' + chapter + '";');
+    doc.write('const url="opengnt_books/"+bookName.toLowerCase().replace(/ /g,"_")+".json";');
+    doc.write('fetch(url).then(r=>{if(!r.ok)throw new Error("Book file not found");return r.json();})');
+    doc.write('.then(allWords=>{const content=document.getElementById("chapterContent");content.innerHTML="";');
+    doc.write('const chapterWords=allWords.filter(w=>w.chapter==chapterNum);const verses={};');
+    doc.write('chapterWords.forEach(w=>{if(!verses[w.verse])verses[w.verse]=[];verses[w.verse].push(w);});');
+    doc.write('Object.keys(verses).sort((a,b)=>Number(a)-Number(b)).forEach(verseNum=>{');
+    doc.write('const p=document.createElement("p");p.innerHTML="<strong>Verse "+verseNum+":</strong> ";');
+    doc.write('verses[verseNum].forEach(wordObj=>{const span=document.createElement("span");span.className="word-group";');
+    doc.write('span.innerHTML=\'<span class="greek-word">\'+wordObj.word+\'</span>\'+(wordObj.morph?" <span class=\'morph\'>"+wordObj.morph+"</span>":"")+\' <span class="strongs">(\'+wordObj.strongs+\')</span>\';');
+    doc.write('span.style.cursor="pointer";span.addEventListener("click",function(){window.opener.postMessage({strongs:wordObj.strongs},"*");window.close();});');
+    doc.write('p.appendChild(span);});content.appendChild(p);});})');
+    doc.write('.catch(err=>{document.getElementById("chapterContent").textContent="Error: "+err.message;});');
+    doc.write('</scr' + 'ipt></body></html>');
+    doc.close();
+});
+
+window.addEventListener('message', (event) => {
+    if (event.data && event.data.strongs) {
+        let strongs = event.data.strongs.trim();
+        if (strongs.includes('«')) strongs = strongs.split('«').pop().trim();
+        strongs = strongs.replace(/[^GH0-9A-Za-z]/gi, '');
+        if (/^[GH]/i.test(strongs)) {
+            const prefix = strongs[0].toUpperCase();
+            let numPart = strongs.substring(1).replace(/^0+/, '') || '0';
+            strongs = prefix + numPart;
+        }
+        document.getElementById('search_term').value = strongs;
+        doSearch(strongs);
+    }
+});
+
+/* ============================================================
+   URL + EVENT BINDINGS
+   ============================================================ */
+function handleUrl() {
+    const params = new URLSearchParams(location.search);
+    if (params.has('id')) {
+        selectRecord(params.get('id'));
+    } else if (params.has('search_term')) {
+        const term = params.get('search_term');
+        document.getElementById('search_term').value = term;
+        doSearch(term);
+    }
+}
+
+document.getElementById('btn-search').addEventListener('click', () => {
+    doSearch(document.getElementById('search_term').value);
+});
+document.getElementById('search_term').addEventListener('keydown', e => {
+    if (e.key === 'Enter') doSearch(document.getElementById('search_term').value);
+});
+
+// Persist details open state
+document.querySelectorAll('details[id]').forEach(detail => {
+    const id = detail.id;
+    const saved = localStorage.getItem(`details-open-${id}`);
+    if (saved !== null) detail.open = saved === 'true';
+    detail.addEventListener('toggle', () => {
+        localStorage.setItem(`details-open-${id}`, detail.open);
+    });
+});
+
+// Hide overlay on bfcache / popstate
+window.addEventListener('pageshow', () => showLoading(false));
+window.addEventListener('popstate', () => showLoading(false));
+
+/* ============================================================
+   START
+   ============================================================ */
+loadDictionary();
+</script>
+</body>
+</html>

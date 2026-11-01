@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interlinear</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div style="max-width:1100px;margin:0 auto 0.5rem;font-weight:700;font-size:1.05rem;">
+    Today's Interlinear New Testament
+  </div>
+  <form id="nav-form">
+    <label>
+      Book
+      <select name="book" id="book-select">
+        <option value="Matthew">Matthew</option>
+        <option value="Mark">Mark</option>
+        <option value="Luke">Luke</option>
+        <option value="John">John</option>
+        <option value="Acts">Acts</option>
+        <option value="Romans">Romans</option>
+        <option value="1Corinthians">1 Corinthians</option>
+        <option value="2Corinthians">2 Corinthians</option>
+        <option value="Galatians">Galatians</option>
+        <option value="Ephesians">Ephesians</option>
+        <option value="Philippians">Philippians</option>
+        <option value="Colossians">Colossians</option>
+        <option value="1Thessalonians">1 Thessalonians</option>
+        <option value="2Thessalonians">2 Thessalonians</option>
+        <option value="1Timothy">1 Timothy</option>
+        <option value="2Timothy">2 Timothy</option>
+        <option value="Titus">Titus</option>
+        <option value="Philemon">Philemon</option>
+        <option value="Hebrews">Hebrews</option>
+        <option value="James">James</option>
+        <option value="1Peter">1 Peter</option>
+        <option value="2Peter">2 Peter</option>
+        <option value="1John">1 John</option>
+        <option value="2John">2 John</option>
+        <option value="3John">3 John</option>
+        <option value="Jude">Jude</option>
+        <option value="Revelation">Revelation</option>
+      </select>
+    </label>
+    <label>
+      Chapter
+      <input type="number" name="chapter" id="chapter-input" value="1" min="1" style="width:4em">
+    </label>
+    <button type="submit">Go</button>
+  </form>
+</header>
+
+<main id="main">
+  <p>Loading…</p>
+</main>
+
+<div id="dict-panel" class="hidden">
+  <button type="button" id="close-dict">×</button>
+  <div id="dict-content"></div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

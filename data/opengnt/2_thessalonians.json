@@ -1,0 +1,5763 @@
+[
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "Παῦλος",
+        "strongs": "G3972",
+        "morph": "N-NSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "Σιλουανὸς",
+        "strongs": "G4610",
+        "morph": "N-NSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "Τιμόθεος",
+        "strongs": "G5095",
+        "morph": "N-NSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "τῇ",
+        "strongs": "G3588",
+        "morph": "T-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "ἐκκλησίᾳ",
+        "strongs": "G1577",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "Θεσσαλονικέων",
+        "strongs": "G2332«G2331",
+        "morph": "N-GPM-LG"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "θεῷ",
+        "strongs": "G2316",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "πατρὶ",
+        "strongs": "G3962",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "κυρίῳ",
+        "strongs": "G2962",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-DSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 1,
+        "word": "Χριστῷ",
+        "strongs": "G5547",
+        "morph": "N-DSM-T"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "χάρις",
+        "strongs": "G5485",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "εἰρήνη",
+        "strongs": "G1515",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "ἀπὸ",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "θεοῦ",
+        "strongs": "G2316",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "πατρὸς",
+        "strongs": "G3962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 2,
+        "word": "Χριστοῦ",
+        "strongs": "G5547",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "Εὐχαριστεῖν",
+        "strongs": "G2168",
+        "morph": "V-PAN"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ὀφείλομεν",
+        "strongs": "G3784",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "τῷ",
+        "strongs": "G3588",
+        "morph": "T-DSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "θεῷ",
+        "strongs": "G2316",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "πάντοτε",
+        "strongs": "G3842",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "περὶ",
+        "strongs": "G4012",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἀδελφοί",
+        "strongs": "G0080",
+        "morph": "N-VPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "καθὼς",
+        "strongs": "G2531",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἄξιόν",
+        "strongs": "G0514",
+        "morph": "A-NSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἐστιν",
+        "strongs": "G1510",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ὑπεραυξάνει",
+        "strongs": "G5232",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἡ",
+        "strongs": "G3588",
+        "morph": "T-NSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "πίστις",
+        "strongs": "G4102",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "πλεονάζει",
+        "strongs": "G4121",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἡ",
+        "strongs": "G3588",
+        "morph": "T-NSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἀγάπη",
+        "strongs": "G0026",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἑνὸς",
+        "strongs": "G1520",
+        "morph": "A-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἑκάστου",
+        "strongs": "G1538",
+        "morph": "A-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "πάντων",
+        "strongs": "G3956",
+        "morph": "A-GPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 3,
+        "word": "ἀλλήλους",
+        "strongs": "G0240",
+        "morph": "C-APM"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ὥστε",
+        "strongs": "G5620",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "αὐτοὺς",
+        "strongs": "G0846",
+        "morph": "P-APM"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ἡμᾶς",
+        "strongs": "G1473",
+        "morph": "P-1AP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ἐγκαυχᾶσθαι",
+        "strongs": "G7013",
+        "morph": "V-PNN"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ταῖς",
+        "strongs": "G3588",
+        "morph": "T-DPF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ἐκκλησίαις",
+        "strongs": "G1577",
+        "morph": "N-DPF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "θεοῦ",
+        "strongs": "G2316",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ὑπὲρ",
+        "strongs": "G5228",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ὑπομονῆς",
+        "strongs": "G5281",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "πίστεως",
+        "strongs": "G4102",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "πᾶσιν",
+        "strongs": "G3956",
+        "morph": "A-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "διωγμοῖς",
+        "strongs": "G1375",
+        "morph": "N-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ταῖς",
+        "strongs": "G3588",
+        "morph": "T-DPF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "θλίψεσιν",
+        "strongs": "G2347",
+        "morph": "N-DPF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "αἷς",
+        "strongs": "G3739",
+        "morph": "R-DPF"
+    },
+    {
+        "chapter": 1,
+        "verse": 4,
+        "word": "ἀνέχεσθε",
+        "strongs": "G0430",
+        "morph": "V-PNI-2P"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "ἔνδειγμα",
+        "strongs": "G1730",
+        "morph": "N-NSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "δικαίας",
+        "strongs": "G1342",
+        "morph": "A-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "κρίσεως",
+        "strongs": "G2920",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "θεοῦ",
+        "strongs": "G2316",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "καταξιωθῆναι",
+        "strongs": "G2661",
+        "morph": "V-APN"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "βασιλείας",
+        "strongs": "G0932",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "θεοῦ",
+        "strongs": "G2316",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "ὑπὲρ",
+        "strongs": "G5228",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "ἧς",
+        "strongs": "G3739",
+        "morph": "R-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 5,
+        "word": "πάσχετε",
+        "strongs": "G3958",
+        "morph": "V-PAI-2P"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "εἴπερ",
+        "strongs": "G1487+G4007«G1512",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "δίκαιον",
+        "strongs": "G1342",
+        "morph": "A-NSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "παρὰ",
+        "strongs": "G3844",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "θεῷ",
+        "strongs": "G2316",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "ἀνταποδοῦναι",
+        "strongs": "G0467",
+        "morph": "V-2AAN"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "θλίβουσιν",
+        "strongs": "G2346",
+        "morph": "V-PAP-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 1,
+        "verse": 6,
+        "word": "θλῖψιν",
+        "strongs": "G2347",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "θλιβομένοις",
+        "strongs": "G2346",
+        "morph": "V-PPP-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "ἄνεσιν",
+        "strongs": "G0425",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "μεθ᾽",
+        "strongs": "G3326",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "τῇ",
+        "strongs": "G3588",
+        "morph": "T-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "ἀποκαλύψει",
+        "strongs": "G0602",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "ἀπ᾽",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "οὐρανοῦ",
+        "strongs": "G3772",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "μετ᾽",
+        "strongs": "G3326",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "ἀγγέλων",
+        "strongs": "G0032",
+        "morph": "N-GPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "δυνάμεως",
+        "strongs": "G1411",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 7,
+        "word": "αὐτοῦ",
+        "strongs": "G0846",
+        "morph": "P-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "πυρὶ",
+        "strongs": "G4442",
+        "morph": "N-DSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "φλογός",
+        "strongs": "G5395",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "διδόντος",
+        "strongs": "G1325",
+        "morph": "V-PAP-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "ἐκδίκησιν",
+        "strongs": "G1557",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "εἰδόσιν",
+        "strongs": "G1492",
+        "morph": "V-RAP-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "θεὸν",
+        "strongs": "G2316",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "ὑπακούουσιν",
+        "strongs": "G5219",
+        "morph": "V-PAP-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "τῷ",
+        "strongs": "G3588",
+        "morph": "T-DSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "εὐαγγελίῳ",
+        "strongs": "G2098",
+        "morph": "N-DSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 8,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "οἵτινες",
+        "strongs": "G3748",
+        "morph": "R-NPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "δίκην",
+        "strongs": "G1349",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "τίσουσιν",
+        "strongs": "G5099",
+        "morph": "V-FAI-3P"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "ὄλεθρον",
+        "strongs": "G3639",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "αἰώνιον",
+        "strongs": "G0166",
+        "morph": "A-ASM"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "ἀπὸ",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "προσώπου",
+        "strongs": "G4383",
+        "morph": "N-GSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "ἀπὸ",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "δόξης",
+        "strongs": "G1391",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "ἰσχύος",
+        "strongs": "G2479",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 9,
+        "word": "αὐτοῦ",
+        "strongs": "G0846",
+        "morph": "P-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ὅταν",
+        "strongs": "G3752",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἔλθῃ",
+        "strongs": "G2064",
+        "morph": "V-2AAS-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἐνδοξασθῆναι",
+        "strongs": "G1740",
+        "morph": "V-APN"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἁγίοις",
+        "strongs": "G0040",
+        "morph": "A-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "αὐτοῦ",
+        "strongs": "G0846",
+        "morph": "P-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "θαυμασθῆναι",
+        "strongs": "G2296",
+        "morph": "V-APN"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "πᾶσιν",
+        "strongs": "G3956",
+        "morph": "A-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "πιστεύσασιν",
+        "strongs": "G4100",
+        "morph": "V-AAP-DPM"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἐπιστεύθη",
+        "strongs": "G4100",
+        "morph": "V-API-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-NSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "μαρτύριον",
+        "strongs": "G3142",
+        "morph": "N-NSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἐφ᾽",
+        "strongs": "G1909",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "τῇ",
+        "strongs": "G3588",
+        "morph": "T-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἡμέρᾳ",
+        "strongs": "G2250",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 10,
+        "word": "ἐκείνῃ",
+        "strongs": "G1565",
+        "morph": "D-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "Εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ὃ",
+        "strongs": "G3739",
+        "morph": "R-ASN"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "προσευχόμεθα",
+        "strongs": "G4336",
+        "morph": "V-PNI-1P"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "πάντοτε",
+        "strongs": "G3842",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "περὶ",
+        "strongs": "G4012",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ἵνα",
+        "strongs": "G2443",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ἀξιώσῃ",
+        "strongs": "G0515",
+        "morph": "V-AAS-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "κλήσεως",
+        "strongs": "G2821",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "θεὸς",
+        "strongs": "G2316",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "πληρώσῃ",
+        "strongs": "G4137",
+        "morph": "V-AAS-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "πᾶσαν",
+        "strongs": "G3956",
+        "morph": "A-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "εὐδοκίαν",
+        "strongs": "G2107",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ἀγαθωσύνης",
+        "strongs": "G0019",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ἔργον",
+        "strongs": "G2041",
+        "morph": "N-ASN"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "πίστεως",
+        "strongs": "G4102",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 11,
+        "word": "δυνάμει",
+        "strongs": "G1411",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ὅπως",
+        "strongs": "G3704",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ἐνδοξασθῇ",
+        "strongs": "G1740",
+        "morph": "V-APS-3S"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-NSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ὄνομα",
+        "strongs": "G3686",
+        "morph": "N-NSN"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ὑμεῖς",
+        "strongs": "G4771",
+        "morph": "P-2NP"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "αὐτῷ",
+        "strongs": "G0846",
+        "morph": "P-DSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "κατὰ",
+        "strongs": "G2596",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "τὴν",
+        "strongs": "G3588",
+        "morph": "T-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "χάριν",
+        "strongs": "G5485",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "θεοῦ",
+        "strongs": "G2316",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 1,
+        "verse": 12,
+        "word": "Χριστοῦ",
+        "strongs": "G5547",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "Ἐρωτῶμεν",
+        "strongs": "G2065",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "ἀδελφοί",
+        "strongs": "G0080",
+        "morph": "N-VPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "ὑπὲρ",
+        "strongs": "G5228",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "παρουσίας",
+        "strongs": "G3952",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "Χριστοῦ",
+        "strongs": "G5547",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "ἐπισυναγωγῆς",
+        "strongs": "G1997",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "ἐπ᾽",
+        "strongs": "G1909",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 1,
+        "word": "αὐτὸν",
+        "strongs": "G0846",
+        "morph": "P-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ταχέως",
+        "strongs": "G5030",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "σαλευθῆναι",
+        "strongs": "G4531",
+        "morph": "V-APN"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ἀπὸ",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "νοὸς",
+        "strongs": "G3563",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "μηδὲ",
+        "strongs": "G3366",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "θροεῖσθαι",
+        "strongs": "G2360",
+        "morph": "V-PPN"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "μήτε",
+        "strongs": "G3383",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "διὰ",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "πνεύματος",
+        "strongs": "G4151",
+        "morph": "N-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "μήτε",
+        "strongs": "G3383",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "διὰ",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "λόγου",
+        "strongs": "G3056",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "μήτε",
+        "strongs": "G3383",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "δι᾽",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ἐπιστολῆς",
+        "strongs": "G1992",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ὡς",
+        "strongs": "G5613",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "δι᾽",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ὡς",
+        "strongs": "G5613",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ἐνέστηκεν",
+        "strongs": "G1764",
+        "morph": "V-RAI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ἡ",
+        "strongs": "G3588",
+        "morph": "T-NSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "ἡμέρα",
+        "strongs": "G2250",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 2,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "Μή",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "τις",
+        "strongs": "G5100",
+        "morph": "X-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἐξαπατήσῃ",
+        "strongs": "G1818",
+        "morph": "V-AAS-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "κατὰ",
+        "strongs": "G2596",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "μηδένα",
+        "strongs": "G3367",
+        "morph": "A-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "τρόπον",
+        "strongs": "G5158",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἐὰν",
+        "strongs": "G1437",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἔλθῃ",
+        "strongs": "G2064",
+        "morph": "V-2AAS-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἡ",
+        "strongs": "G3588",
+        "morph": "T-NSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἀποστασία",
+        "strongs": "G0646",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "πρῶτον",
+        "strongs": "G4413",
+        "morph": "A-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἀποκαλυφθῇ",
+        "strongs": "G0601",
+        "morph": "V-APS-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἄνθρωπος",
+        "strongs": "G0444",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἀνομίας",
+        "strongs": "G0458",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "υἱὸς",
+        "strongs": "G5207",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 3,
+        "word": "ἀπωλείας",
+        "strongs": "G0684",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ἀντικείμενος",
+        "strongs": "G0480",
+        "morph": "V-PNP-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ὑπεραιρόμενος",
+        "strongs": "G5229",
+        "morph": "V-PMP-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ἐπὶ",
+        "strongs": "G1909",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "πάντα",
+        "strongs": "G3956",
+        "morph": "A-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "λεγόμενον",
+        "strongs": "G3004",
+        "morph": "V-PPP-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "θεὸν",
+        "strongs": "G2316",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ἢ",
+        "strongs": "G2228",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "σέβασμα",
+        "strongs": "G4574",
+        "morph": "N-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ὥστε",
+        "strongs": "G5620",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "αὐτὸν",
+        "strongs": "G0846",
+        "morph": "P-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "τὸν",
+        "strongs": "G3588",
+        "morph": "T-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ναὸν",
+        "strongs": "G3485",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "θεοῦ",
+        "strongs": "G2316",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "καθίσαι",
+        "strongs": "G2523",
+        "morph": "V-AAN"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ἀποδεικνύντα",
+        "strongs": "G0584",
+        "morph": "V-PAP-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ἑαυτὸν",
+        "strongs": "G1438",
+        "morph": "F-3ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "ἐστὶν",
+        "strongs": "G1510",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 4,
+        "word": "θεός",
+        "strongs": "G2316",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "Οὐ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "μνημονεύετε",
+        "strongs": "G3421",
+        "morph": "V-PAI-2P"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "ἔτι",
+        "strongs": "G2089",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "ὢν",
+        "strongs": "G1510",
+        "morph": "V-PAP-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "πρὸς",
+        "strongs": "G4314",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "ταῦτα",
+        "strongs": "G3778",
+        "morph": "D-APN"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "ἔλεγον",
+        "strongs": "G3004",
+        "morph": "V-IAI-1S"
+    },
+    {
+        "chapter": 2,
+        "verse": 5,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "νῦν",
+        "strongs": "G3568",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "κατέχον",
+        "strongs": "G2722",
+        "morph": "V-PAP-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "οἴδατε",
+        "strongs": "G1492",
+        "morph": "V-RAI-2P"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "ἀποκαλυφθῆναι",
+        "strongs": "G0601",
+        "morph": "V-APN"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "αὐτὸν",
+        "strongs": "G0846",
+        "morph": "P-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "τῷ",
+        "strongs": "G3588",
+        "morph": "T-DSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "ἑαυτοῦ",
+        "strongs": "G1438",
+        "morph": "F-3GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 6,
+        "word": "καιρῷ",
+        "strongs": "G2540",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-NSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "γὰρ",
+        "strongs": "G1063",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "μυστήριον",
+        "strongs": "G3466",
+        "morph": "N-NSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "ἤδη",
+        "strongs": "G2235",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "ἐνεργεῖται",
+        "strongs": "G1754",
+        "morph": "V-PMI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "ἀνομίας",
+        "strongs": "G0458",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "μόνον",
+        "strongs": "G3441",
+        "morph": "A-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "κατέχων",
+        "strongs": "G2722",
+        "morph": "V-PAP-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "ἄρτι",
+        "strongs": "G0737",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "ἕως",
+        "strongs": "G2193",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "ἐκ",
+        "strongs": "G1537",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "μέσου",
+        "strongs": "G3319",
+        "morph": "A-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 7,
+        "word": "γένηται",
+        "strongs": "G1096",
+        "morph": "V-2ADS-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "τότε",
+        "strongs": "G5119",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "ἀποκαλυφθήσεται",
+        "strongs": "G0601",
+        "morph": "V-FPI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "ἄνομος",
+        "strongs": "G0459",
+        "morph": "A-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "ὃν",
+        "strongs": "G3739",
+        "morph": "R-ASM"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "κύριος",
+        "strongs": "G2962",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "Ἰησοῦς",
+        "strongs": "G2424",
+        "morph": "N-NSM-P"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "ἀνελεῖ",
+        "strongs": "G0337",
+        "morph": "V-2FAI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "τῷ",
+        "strongs": "G3588",
+        "morph": "T-DSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "πνεύματι",
+        "strongs": "G4151",
+        "morph": "N-DSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "στόματος",
+        "strongs": "G4750",
+        "morph": "N-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "αὐτοῦ",
+        "strongs": "G0846",
+        "morph": "P-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "καταργήσει",
+        "strongs": "G2673",
+        "morph": "V-FAI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "τῇ",
+        "strongs": "G3588",
+        "morph": "T-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "ἐπιφανείᾳ",
+        "strongs": "G2015",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "παρουσίας",
+        "strongs": "G3952",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 8,
+        "word": "αὐτοῦ",
+        "strongs": "G0846",
+        "morph": "P-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "οὗ",
+        "strongs": "G3739",
+        "morph": "R-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "ἐστιν",
+        "strongs": "G1510",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "ἡ",
+        "strongs": "G3588",
+        "morph": "T-NSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "παρουσία",
+        "strongs": "G3952",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "κατ᾽",
+        "strongs": "G2596",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "ἐνέργειαν",
+        "strongs": "G1753",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "σατανᾶ",
+        "strongs": "G4566«G4567",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "πάσῃ",
+        "strongs": "G3956",
+        "morph": "A-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "δυνάμει",
+        "strongs": "G1411",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "σημείοις",
+        "strongs": "G4592",
+        "morph": "N-DPN"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "τέρασιν",
+        "strongs": "G5059",
+        "morph": "N-DPN"
+    },
+    {
+        "chapter": 2,
+        "verse": 9,
+        "word": "ψεύδους",
+        "strongs": "G5579",
+        "morph": "N-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "πάσῃ",
+        "strongs": "G3956",
+        "morph": "A-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἀπάτῃ",
+        "strongs": "G0539",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἀδικίας",
+        "strongs": "G0093",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἀπολλυμένοις",
+        "strongs": "G0622",
+        "morph": "V-PEP-DPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἀνθ᾽",
+        "strongs": "G0473",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ὧν",
+        "strongs": "G3739",
+        "morph": "R-GPN"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "τὴν",
+        "strongs": "G3588",
+        "morph": "T-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἀγάπην",
+        "strongs": "G0026",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἀληθείας",
+        "strongs": "G0225",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "οὐκ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "ἐδέξαντο",
+        "strongs": "G1209",
+        "morph": "V-ADI-3P"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "σωθῆναι",
+        "strongs": "G4982",
+        "morph": "V-APN"
+    },
+    {
+        "chapter": 2,
+        "verse": 10,
+        "word": "αὐτούς",
+        "strongs": "G0846",
+        "morph": "P-APM"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "διὰ",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "τοῦτο",
+        "strongs": "G3778",
+        "morph": "D-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "πέμπει",
+        "strongs": "G3992",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "αὐτοῖς",
+        "strongs": "G0846",
+        "morph": "P-DPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "θεὸς",
+        "strongs": "G2316",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "ἐνέργειαν",
+        "strongs": "G1753",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "πλάνης",
+        "strongs": "G4106",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "πιστεῦσαι",
+        "strongs": "G4100",
+        "morph": "V-AAN"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "αὐτοὺς",
+        "strongs": "G0846",
+        "morph": "P-APM"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "τῷ",
+        "strongs": "G3588",
+        "morph": "T-DSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 11,
+        "word": "ψεύδει",
+        "strongs": "G5579",
+        "morph": "N-DSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "ἵνα",
+        "strongs": "G2443",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "κριθῶσιν",
+        "strongs": "G2919",
+        "morph": "V-APS-3P"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "πάντες",
+        "strongs": "G3956",
+        "morph": "A-NPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "οἱ",
+        "strongs": "G3588",
+        "morph": "T-NPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "πιστεύσαντες",
+        "strongs": "G4100",
+        "morph": "V-AAP-NPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "τῇ",
+        "strongs": "G3588",
+        "morph": "T-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "ἀληθείᾳ",
+        "strongs": "G0225",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "ἀλλ᾽",
+        "strongs": "G0235",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "εὐδοκήσαντες",
+        "strongs": "G2106",
+        "morph": "V-AAP-NPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "τῇ",
+        "strongs": "G3588",
+        "morph": "T-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 12,
+        "word": "ἀδικίᾳ",
+        "strongs": "G0093",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "Ἡμεῖς",
+        "strongs": "G1473",
+        "morph": "P-1NP"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ὀφείλομεν",
+        "strongs": "G3784",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "εὐχαριστεῖν",
+        "strongs": "G2168",
+        "morph": "V-PAN"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "τῷ",
+        "strongs": "G3588",
+        "morph": "T-DSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "θεῷ",
+        "strongs": "G2316",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "πάντοτε",
+        "strongs": "G3842",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "περὶ",
+        "strongs": "G4012",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ἀδελφοὶ",
+        "strongs": "G0080",
+        "morph": "N-VPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ἠγαπημένοι",
+        "strongs": "G0025",
+        "morph": "V-RPP-VPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ὑπὸ",
+        "strongs": "G5259",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "εἵλατο",
+        "strongs": "G0138",
+        "morph": "V-AMI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "θεὸς",
+        "strongs": "G2316",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ἀπαρχὴν",
+        "strongs": "G0536",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "σωτηρίαν",
+        "strongs": "G4991",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ἁγιασμῷ",
+        "strongs": "G0038",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "πνεύματος",
+        "strongs": "G4151",
+        "morph": "N-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "πίστει",
+        "strongs": "G4102",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 13,
+        "word": "ἀληθείας",
+        "strongs": "G0225",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "ὃ",
+        "strongs": "G3739",
+        "morph": "R-ASN"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "ἐκάλεσεν",
+        "strongs": "G2564",
+        "morph": "V-AAI-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "διὰ",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "εὐαγγελίου",
+        "strongs": "G2098",
+        "morph": "N-GSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "περιποίησιν",
+        "strongs": "G4047",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "δόξης",
+        "strongs": "G1391",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 2,
+        "verse": 14,
+        "word": "Χριστοῦ",
+        "strongs": "G5547",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "Ἄρα",
+        "strongs": "G0686",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "οὖν",
+        "strongs": "G3767",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "ἀδελφοί",
+        "strongs": "G0080",
+        "morph": "N-VPM"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "στήκετε",
+        "strongs": "G4739",
+        "morph": "V-PAM-2P"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "κρατεῖτε",
+        "strongs": "G2902",
+        "morph": "V-PAM-2P"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "τὰς",
+        "strongs": "G3588",
+        "morph": "T-APF"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "παραδόσεις",
+        "strongs": "G3862",
+        "morph": "N-APF"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "ἃς",
+        "strongs": "G3739",
+        "morph": "R-APF"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "ἐδιδάχθητε",
+        "strongs": "G1321",
+        "morph": "V-API-2P"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "εἴτε",
+        "strongs": "G1535",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "διὰ",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "λόγου",
+        "strongs": "G3056",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "εἴτε",
+        "strongs": "G1535",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "δι᾽",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "ἐπιστολῆς",
+        "strongs": "G1992",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 15,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "Αὐτὸς",
+        "strongs": "G0846",
+        "morph": "P-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "κύριος",
+        "strongs": "G2962",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "Ἰησοῦς",
+        "strongs": "G2424",
+        "morph": "N-NSM-P"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "Χριστὸς",
+        "strongs": "G5547",
+        "morph": "N-NSM-T"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "θεὸς",
+        "strongs": "G2316",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "πατὴρ",
+        "strongs": "G3962",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ἀγαπήσας",
+        "strongs": "G0025",
+        "morph": "V-AAP-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ἡμᾶς",
+        "strongs": "G1473",
+        "morph": "P-1AP"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "δοὺς",
+        "strongs": "G1325",
+        "morph": "V-2AAP-NSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "παράκλησιν",
+        "strongs": "G3874",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "αἰωνίαν",
+        "strongs": "G0166",
+        "morph": "A-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ἐλπίδα",
+        "strongs": "G1680",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ἀγαθὴν",
+        "strongs": "G0018",
+        "morph": "A-ASF"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 16,
+        "word": "χάριτι",
+        "strongs": "G5485",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "παρακαλέσαι",
+        "strongs": "G3870",
+        "morph": "V-AAO-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "τὰς",
+        "strongs": "G3588",
+        "morph": "T-APF"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "καρδίας",
+        "strongs": "G2588",
+        "morph": "N-APF"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "στηρίξαι",
+        "strongs": "G4741",
+        "morph": "V-AAO-3S"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "παντὶ",
+        "strongs": "G3956",
+        "morph": "A-DSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "ἔργῳ",
+        "strongs": "G2041",
+        "morph": "N-DSN"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "λόγῳ",
+        "strongs": "G3056",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 2,
+        "verse": 17,
+        "word": "ἀγαθῷ",
+        "strongs": "G0018",
+        "morph": "A-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "Τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "λοιπὸν",
+        "strongs": "G3063",
+        "morph": "A-ASN"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "προσεύχεσθε",
+        "strongs": "G4336",
+        "morph": "V-PNM-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "ἀδελφοί",
+        "strongs": "G0080",
+        "morph": "N-VPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "περὶ",
+        "strongs": "G4012",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "ἵνα",
+        "strongs": "G2443",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "λόγος",
+        "strongs": "G3056",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "τρέχῃ",
+        "strongs": "G5143",
+        "morph": "V-PAS-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "δοξάζηται",
+        "strongs": "G1392",
+        "morph": "V-PPS-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "καθὼς",
+        "strongs": "G2531",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "πρὸς",
+        "strongs": "G4314",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 1,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "ἵνα",
+        "strongs": "G2443",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "ῥυσθῶμεν",
+        "strongs": "G4506",
+        "morph": "V-APS-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "ἀπὸ",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "τῶν",
+        "strongs": "G3588",
+        "morph": "T-GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "ἀτόπων",
+        "strongs": "G0824",
+        "morph": "A-GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "πονηρῶν",
+        "strongs": "G4190",
+        "morph": "A-GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "ἀνθρώπων",
+        "strongs": "G0444",
+        "morph": "N-GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "οὐ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "γὰρ",
+        "strongs": "G1063",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "πάντων",
+        "strongs": "G3956",
+        "morph": "A-GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "ἡ",
+        "strongs": "G3588",
+        "morph": "T-NSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 2,
+        "word": "πίστις",
+        "strongs": "G4102",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "Πιστὸς",
+        "strongs": "G4103",
+        "morph": "A-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "δέ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "ἐστιν",
+        "strongs": "G1510",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "κύριος",
+        "strongs": "G2962",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "ὃς",
+        "strongs": "G3739",
+        "morph": "R-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "στηρίξει",
+        "strongs": "G4741",
+        "morph": "V-FAI-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "φυλάξει",
+        "strongs": "G5442",
+        "morph": "V-FAI-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "ἀπὸ",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 3,
+        "word": "πονηροῦ",
+        "strongs": "G4190",
+        "morph": "A-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "πεποίθαμεν",
+        "strongs": "G3982",
+        "morph": "V-2RAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "κυρίῳ",
+        "strongs": "G2962",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "ἐφ᾽",
+        "strongs": "G1909",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "ἃ",
+        "strongs": "G3739",
+        "morph": "R-APN"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "παραγγέλλομεν",
+        "strongs": "G3853",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "ποιεῖτε",
+        "strongs": "G4160",
+        "morph": "V-PAI-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 4,
+        "word": "ποιήσετε",
+        "strongs": "G4160",
+        "morph": "V-FAI-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "Ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "κύριος",
+        "strongs": "G2962",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "κατευθύναι",
+        "strongs": "G2720",
+        "morph": "V-AAO-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "τὰς",
+        "strongs": "G3588",
+        "morph": "T-APF"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "καρδίας",
+        "strongs": "G2588",
+        "morph": "N-APF"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "τὴν",
+        "strongs": "G3588",
+        "morph": "T-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "ἀγάπην",
+        "strongs": "G0026",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "θεοῦ",
+        "strongs": "G2316",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "τὴν",
+        "strongs": "G3588",
+        "morph": "T-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "ὑπομονὴν",
+        "strongs": "G5281",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 5,
+        "word": "Χριστοῦ",
+        "strongs": "G5547",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "Παραγγέλλομεν",
+        "strongs": "G3853",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἀδελφοί",
+        "strongs": "G0080",
+        "morph": "N-VPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ὀνόματι",
+        "strongs": "G3686",
+        "morph": "N-DSN"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "Χριστοῦ",
+        "strongs": "G5547",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "στέλλεσθαι",
+        "strongs": "G4724",
+        "morph": "V-PMN"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἀπὸ",
+        "strongs": "G0575",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "παντὸς",
+        "strongs": "G3956",
+        "morph": "A-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἀδελφοῦ",
+        "strongs": "G0080",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἀτάκτως",
+        "strongs": "G0814",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "περιπατοῦντος",
+        "strongs": "G4043",
+        "morph": "V-PAP-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "κατὰ",
+        "strongs": "G2596",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "τὴν",
+        "strongs": "G3588",
+        "morph": "T-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "παράδοσιν",
+        "strongs": "G3862",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἣν",
+        "strongs": "G3739",
+        "morph": "R-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "παρελάβοσαν",
+        "strongs": "G3880",
+        "morph": "V-2AAI-3P"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "παρ᾽",
+        "strongs": "G3844",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 6,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "Αὐτοὶ",
+        "strongs": "G0846",
+        "morph": "P-NPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "γὰρ",
+        "strongs": "G1063",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "οἴδατε",
+        "strongs": "G1492",
+        "morph": "V-RAI-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "πῶς",
+        "strongs": "G4459",
+        "morph": "ADV-I"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "δεῖ",
+        "strongs": "G1210",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "μιμεῖσθαι",
+        "strongs": "G3401",
+        "morph": "V-PNN"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "ἡμᾶς",
+        "strongs": "G1473",
+        "morph": "P-1AP"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "οὐκ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "ἠτακτήσαμεν",
+        "strongs": "G0812",
+        "morph": "V-AAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 7,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "οὐδὲ",
+        "strongs": "G3761",
+        "morph": "CONJ-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "δωρεὰν",
+        "strongs": "G1432",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ἄρτον",
+        "strongs": "G0740",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ἐφάγομεν",
+        "strongs": "G5315",
+        "morph": "V-AAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "παρά",
+        "strongs": "G3844",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "τινος",
+        "strongs": "G5100",
+        "morph": "X-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ἀλλ᾽",
+        "strongs": "G0235",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "κόπῳ",
+        "strongs": "G2873",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "μόχθῳ",
+        "strongs": "G3449",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "νυκτὸς",
+        "strongs": "G3571",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ἡμέρας",
+        "strongs": "G2250",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ἐργαζόμενοι",
+        "strongs": "G2038",
+        "morph": "V-PNP-NPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "πρὸς",
+        "strongs": "G4314",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ἐπιβαρῆσαί",
+        "strongs": "G1912",
+        "morph": "V-AAN"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "τινα",
+        "strongs": "G5100",
+        "morph": "X-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 8,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "οὐχ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "οὐκ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ἔχομεν",
+        "strongs": "G2192",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ἐξουσίαν",
+        "strongs": "G1849",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ἀλλ᾽",
+        "strongs": "G0235",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ἵνα",
+        "strongs": "G2443",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ἑαυτοὺς",
+        "strongs": "G1438",
+        "morph": "F-1APM"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "τύπον",
+        "strongs": "G5179",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "δῶμεν",
+        "strongs": "G1325",
+        "morph": "V-2AAS-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "εἰς",
+        "strongs": "G1519",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "τὸ",
+        "strongs": "G3588",
+        "morph": "T-ASN"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "μιμεῖσθαι",
+        "strongs": "G3401",
+        "morph": "V-PNN"
+    },
+    {
+        "chapter": 3,
+        "verse": 9,
+        "word": "ἡμᾶς",
+        "strongs": "G1473",
+        "morph": "P-1AP"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "γὰρ",
+        "strongs": "G1063",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "ὅτε",
+        "strongs": "G3753",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "ἦμεν",
+        "strongs": "G1510",
+        "morph": "V-IAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "πρὸς",
+        "strongs": "G4314",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "ὑμᾶς",
+        "strongs": "G4771",
+        "morph": "P-2AP"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "τοῦτο",
+        "strongs": "G3778",
+        "morph": "D-ASN"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "παρηγγέλλομεν",
+        "strongs": "G3853",
+        "morph": "V-IAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "ὅτι",
+        "strongs": "G3754",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "εἴ",
+        "strongs": "G1487",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "τις",
+        "strongs": "G5100",
+        "morph": "X-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "οὐ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "θέλει",
+        "strongs": "G2309",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "ἐργάζεσθαι",
+        "strongs": "G2038",
+        "morph": "V-PNN"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "μηδὲ",
+        "strongs": "G3366",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 3,
+        "verse": 10,
+        "word": "ἐσθιέτω",
+        "strongs": "G2068",
+        "morph": "V-PAM-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "Ἀκούομεν",
+        "strongs": "G0191",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "γάρ",
+        "strongs": "G1063",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "τινας",
+        "strongs": "G5100",
+        "morph": "X-APM"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "περιπατοῦντας",
+        "strongs": "G4043",
+        "morph": "V-PAP-APM"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "ἀτάκτως",
+        "strongs": "G0814",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "μηδὲν",
+        "strongs": "G3367",
+        "morph": "A-ASN"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "ἐργαζομένους",
+        "strongs": "G2038",
+        "morph": "V-PNP-APM"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "ἀλλὰ",
+        "strongs": "G0235",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 11,
+        "word": "περιεργαζομένους",
+        "strongs": "G4020",
+        "morph": "V-PNP-APM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "τοῖς",
+        "strongs": "G3588",
+        "morph": "T-DPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "τοιούτοις",
+        "strongs": "G5108",
+        "morph": "D-DPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "παραγγέλλομεν",
+        "strongs": "G3853",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "παρακαλοῦμεν",
+        "strongs": "G3870",
+        "morph": "V-PAI-1P"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "κυρίῳ",
+        "strongs": "G2962",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-DSM-P"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "Χριστῷ",
+        "strongs": "G5547",
+        "morph": "N-DSM-T"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "ἵνα",
+        "strongs": "G2443",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "μετὰ",
+        "strongs": "G3326",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "ἡσυχίας",
+        "strongs": "G2271",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "ἐργαζόμενοι",
+        "strongs": "G2038",
+        "morph": "V-PNP-NPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "τὸν",
+        "strongs": "G3588",
+        "morph": "T-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "ἑαυτῶν",
+        "strongs": "G1438",
+        "morph": "F-3GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "ἄρτον",
+        "strongs": "G0740",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 12,
+        "word": "ἐσθίωσιν",
+        "strongs": "G2068",
+        "morph": "V-PAS-3P"
+    },
+    {
+        "chapter": 3,
+        "verse": 13,
+        "word": "Ὑμεῖς",
+        "strongs": "G4771",
+        "morph": "P-2NP"
+    },
+    {
+        "chapter": 3,
+        "verse": 13,
+        "word": "δέ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 13,
+        "word": "ἀδελφοί",
+        "strongs": "G0080",
+        "morph": "N-VPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 13,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 13,
+        "word": "ἐγκακήσητε",
+        "strongs": "G1573",
+        "morph": "V-AAS-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 13,
+        "word": "καλοποιοῦντες",
+        "strongs": "G2569",
+        "morph": "V-PAP-NPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "Εἰ",
+        "strongs": "G1487",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "δέ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "τις",
+        "strongs": "G5100",
+        "morph": "X-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "οὐχ",
+        "strongs": "G3756",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "ὑπακούει",
+        "strongs": "G5219",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "τῷ",
+        "strongs": "G3588",
+        "morph": "T-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "λόγῳ",
+        "strongs": "G3056",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "διὰ",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "ἐπιστολῆς",
+        "strongs": "G1992",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "τοῦτον",
+        "strongs": "G3778",
+        "morph": "D-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "σημειοῦσθε",
+        "strongs": "G4593",
+        "morph": "V-PMM-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "συναναμίγνυσθαι",
+        "strongs": "G4874",
+        "morph": "V-PMN"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "αὐτῷ",
+        "strongs": "G0846",
+        "morph": "P-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "ἵνα",
+        "strongs": "G2443",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 14,
+        "word": "ἐντραπῇ",
+        "strongs": "G1788",
+        "morph": "V-2APS-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "καὶ",
+        "strongs": "G2532",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "μὴ",
+        "strongs": "G3361",
+        "morph": "PRT-N"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "ὡς",
+        "strongs": "G5613",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "ἐχθρὸν",
+        "strongs": "G2190",
+        "morph": "A-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "ἡγεῖσθε",
+        "strongs": "G2233",
+        "morph": "V-PNM-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "ἀλλὰ",
+        "strongs": "G0235",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "νουθετεῖτε",
+        "strongs": "G3560",
+        "morph": "V-PAM-2P"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "ὡς",
+        "strongs": "G5613",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 15,
+        "word": "ἀδελφόν",
+        "strongs": "G0080",
+        "morph": "N-ASM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "Αὐτὸς",
+        "strongs": "G0846",
+        "morph": "P-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "δὲ",
+        "strongs": "G1161",
+        "morph": "CONJ"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "κύριος",
+        "strongs": "G2962",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "τῆς",
+        "strongs": "G3588",
+        "morph": "T-GSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "εἰρήνης",
+        "strongs": "G1515",
+        "morph": "N-GSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "δῴη",
+        "strongs": "G1325",
+        "morph": "V-2AAO-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "ὑμῖν",
+        "strongs": "G4771",
+        "morph": "P-2DP"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "τὴν",
+        "strongs": "G3588",
+        "morph": "T-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "εἰρήνην",
+        "strongs": "G1515",
+        "morph": "N-ASF"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "διὰ",
+        "strongs": "G1223",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "παντὸς",
+        "strongs": "G3956",
+        "morph": "A-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "παντὶ",
+        "strongs": "G3956",
+        "morph": "A-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "τρόπῳ",
+        "strongs": "G5158",
+        "morph": "N-DSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "κύριος",
+        "strongs": "G2962",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "μετὰ",
+        "strongs": "G3326",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "πάντων",
+        "strongs": "G3956",
+        "morph": "A-GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 16,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "Ὁ",
+        "strongs": "G3588",
+        "morph": "T-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "ἀσπασμὸς",
+        "strongs": "G0783",
+        "morph": "N-NSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "τῇ",
+        "strongs": "G3588",
+        "morph": "T-DSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "ἐμῇ",
+        "strongs": "G1699",
+        "morph": "S-1SDSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "χειρὶ",
+        "strongs": "G5495",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "Παύλου",
+        "strongs": "G3972",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "ὅ",
+        "strongs": "G3739",
+        "morph": "R-NSN"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "ἐστιν",
+        "strongs": "G1510",
+        "morph": "V-PAI-3S"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "σημεῖον",
+        "strongs": "G4592",
+        "morph": "N-NSN"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "ἐν",
+        "strongs": "G1722",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "πάσῃ",
+        "strongs": "G3956",
+        "morph": "A-DSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "ἐπιστολῇ",
+        "strongs": "G1992",
+        "morph": "N-DSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "οὕτως",
+        "strongs": "G3779",
+        "morph": "ADV"
+    },
+    {
+        "chapter": 3,
+        "verse": 17,
+        "word": "γράφω",
+        "strongs": "G1125",
+        "morph": "V-PAI-1S"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "Ἡ",
+        "strongs": "G3588",
+        "morph": "T-NSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "χάρις",
+        "strongs": "G5485",
+        "morph": "N-NSF"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "τοῦ",
+        "strongs": "G3588",
+        "morph": "T-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "κυρίου",
+        "strongs": "G2962",
+        "morph": "N-GSM"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "ἡμῶν",
+        "strongs": "G1473",
+        "morph": "P-1GP"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "Ἰησοῦ",
+        "strongs": "G2424",
+        "morph": "N-GSM-P"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "Χριστοῦ",
+        "strongs": "G5547",
+        "morph": "N-GSM-T"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "μετὰ",
+        "strongs": "G3326",
+        "morph": "PREP"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "πάντων",
+        "strongs": "G3956",
+        "morph": "A-GPM"
+    },
+    {
+        "chapter": 3,
+        "verse": 18,
+        "word": "ὑμῶν",
+        "strongs": "G4771",
+        "morph": "P-2GP"
+    }
+]

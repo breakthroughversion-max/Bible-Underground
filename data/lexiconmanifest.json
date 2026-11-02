@@ -1,0 +1,61 @@
+{
+  "id": "com.breakthroughversion.todaysgreekdictionary",
+  "name": "Today's Greek Dictionary by Ray Geide",
+  "short_name": "Today's Greek Dictionary",
+  "description": "A powerful Greek Lexicon / Dictionary based on the Today's Bible by Ray Geide. Search words, see definitions, and study the original Greek of the New Testament.",
+  "start_url": "/lexicon.html",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#1c1c1c",
+  "theme_color": "#0c2d5a",
+  "lang": "en",
+  "launch_handler": {
+    "client_mode": "auto"
+    },
+  "dir": "ltr",
+  "categories": ["books", "education", "reference"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/greek-dict-icon-192tran.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/greek-dict-icon-512tran.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/lexiconscreenshot1.png",
+      "sizes": "931x924",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Reading view in Today's Greek Dictionary"
+    },
+    {
+      "src": "/lexiconscreenshot2.png",
+      "sizes": "931x924",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Reading view in Today's Greek Dictionary"
+    },
+    {
+      "src": "/lexiconscreenshot3.png",
+      "sizes": "931x924",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Reading view in Today's Greek Dictionary"
+    }
+  ]
+}

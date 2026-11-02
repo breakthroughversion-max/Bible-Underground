@@ -651,6 +651,9 @@ function bindWordClicks() {
       if (row.thayer) {
         parts.push(`<p><strong>Thayer:</strong> ${escapeHtml(row.thayer).replace(/\n/g, '<br>')}</p>`);
       }
+      if (row.strongs) {
+        parts.push(`<p><strong>Strong's:</strong> ${escapeHtml(row.strongs).replace(/\n/g, '<br>')}</p>`);
+      }
       if (row.dodson) {
         parts.push(`<p><strong>Dodson:</strong> ${escapeHtml(row.dodson).replace(/\n/g, '<br>')}</p>`);
       }

@@ -99,6 +99,10 @@
         --theme-verseno: #c4a484;
     }
 
+    :root {
+        --bu-home-bar-height: 44px;   /* height of the dark Home bar */
+    }
+
     body {
         font-family: 'Poppins', sans-serif;
         margin: 0;
@@ -111,7 +115,7 @@
     /* Tab Bar */
     .tab-bar {
         position: fixed;
-        top: 0; left: 0; right: 0;
+        top: var(--bu-home-bar-height); left: 0; right: 0;
         z-index: 2000;
         display: flex;
         background: var(--theme-glass);
@@ -145,18 +149,18 @@
     .tab-content.active { display: block; }
 
     /* Reader needs extra top space for header */
-    #reader.tab-content { padding-top: 135px; }
+    #reader.tab-content { padding-top: calc(135px + var(--bu-home-bar-height)); }
 
     /* Other tabs only need space for tab bar */
     #daily.tab-content,
-    #search.tab-content { padding-top: 75px; }
+    #search.tab-content { padding-top: calc(75px + var(--bu-home-bar-height)); }
 
-    #help.tab-content { padding-top: 110px; }
+    #help.tab-content { padding-top: calc(110px + var(--bu-home-bar-height)); }
 
     /* Reader Header */
     .main-header {
         position: fixed;
-        top: 55px; left: 0; right: 0;
+        top: calc(var(--bu-home-bar-height) + 55px); left: 0; right: 0;
         z-index: 1300;
         display: flex;
         justify-content: space-between;
@@ -190,7 +194,7 @@
     /* Search */
     .search-top-bar {
         position: fixed;
-        top: 55px;
+        top: calc(var(--bu-home-bar-height) + 55px);
         left: 0;
         right: 0;
         z-index: 1200;
@@ -238,7 +242,7 @@
     }
 
     #search .search-container {
-        padding-top: 210px; 
+        padding-top: calc(210px + var(--bu-home-bar-height)); 
         max-width: 700px;
         margin: 0 auto;
         padding-left: 20px;
@@ -280,7 +284,7 @@
     /* Help tab top buttons */
     .help-top-bar {
         position: fixed;
-        top: 55px;
+        top: calc(var(--bu-home-bar-height) + 55px);
         left: 0;
         right: 0;
         z-index: 1200;
@@ -498,33 +502,33 @@
         font-size: 0.95em;
     }
 
-.tts-settings select,
-#voiceSelect,
-#speedSelect {
-    padding: 10px 12px;
-    font-size: 0.95em;
-    background: rgba(255,255,255,0.15);        /* Same as main dropdowns */
-    color: #fff;
-    border: 1px solid rgba(255,220,100,0.35); /* Gold tint or adjust per theme */
-    border-radius: 10px;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-}
+    .tts-settings select,
+    #voiceSelect,
+    #speedSelect {
+        padding: 10px 12px;
+        font-size: 0.95em;
+        background: rgba(255,255,255,0.15);        /* Same as main dropdowns */
+        color: #fff;
+        border: 1px solid rgba(255,220,100,0.35); /* Gold tint or adjust per theme */
+        border-radius: 10px;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
 
-.tts-settings select:hover,
-#voiceSelect:hover,
-#speedSelect:hover,
-.tts-settings select:focus,
-#voiceSelect:focus,
-#speedSelect:focus {
-    background: var(--theme-accent);
-    color: var(--text-hover);
-    border-color: var(--theme-accent-light, var(--theme-accent));
-    box-shadow: 0 6px 20px rgba(255,255,255,0.2);
-}
+    .tts-settings select:hover,
+    #voiceSelect:hover,
+    #speedSelect:hover,
+    .tts-settings select:focus,
+    #voiceSelect:focus,
+    #speedSelect:focus {
+        background: var(--theme-accent);
+        color: var(--text-hover);
+        border-color: var(--theme-accent-light, var(--theme-accent));
+        box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+    }
 
     /* ==================== MISC ==================== */
     footer {
@@ -556,7 +560,7 @@
     #daily-tab .daily-top-bar,
     .daily-tab-content .daily-top-bar {
         position: fixed;
-        top: 55px;
+        top: calc(var(--bu-home-bar-height) + 55px);
         left: 0;
         right: 0;
         z-index: 1200;
@@ -1046,6 +1050,42 @@
     padding-bottom: 1px;
 }
 
+#bu-home-bar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #2c2416;
+    color: #f7f4ef;
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+#bu-home-bar a {
+    color: #f7f4ef;
+    text-decoration: none;
+}
+#bu-home-bar a:hover {
+    text-decoration: underline;
+}
+#bu-home-bar .bu-sep {
+    opacity: 0.4;
+}
+#bu-home-bar .bu-title {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    opacity: 0.95;
+}
+#bu-home-bar a.bu-current {
+    font-weight: 700;
+    color: #f0c14d;          /* gold highlight */
+    text-decoration: underline;
+}
+
 /* ==================== MOBILE ==================== */
     @media (max-width: 640px) {
         body { padding: 70px 10px 60px; }
@@ -1087,38 +1127,14 @@
 </head>
 <body>
 <!-- Bible Underground navigation bar -->
-<div id="bu-home-bar" style="
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    background: #2c2416;
-    color: #f7f4ef;
-    padding: 10px 16px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 18px;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-">
-    <a href="index.html" style="color:#f7f4ef; text-decoration:none; font-weight:600;">
-        ← Home
-    </a>
-
-    <span style="opacity:0.4;">|</span>
-
-    <a href="underground.html" style="color:#f7f4ef; text-decoration:none;">
-        Reader
-    </a>
-
-    <a href="lexicon.html" style="color:#f7f4ef; text-decoration:none;">
-        Lexicon
-    </a>
-
-    <a href="interlinear.html" style="color:#f7f4ef; text-decoration:none;">
-        Interlinear
-    </a>
+<div id="bu-home-bar">
+    <a href="index.html">← Home</a>
+    <span class="bu-sep">|</span>
+    <span class="bu-title">Bible Underground</span>
+    <span class="bu-sep">|</span>
+    <a href="underground.html" class="bu-current">Reader</a>
+    <a href="lexicon.html">Lexicon</a>
+    <a href="interlinear.html">Interlinear</a>
 </div>
 
     <!-- Tab Bar -->

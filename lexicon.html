@@ -8,7 +8,7 @@
     <title>Today's Greek Dictionary by Ray Geide</title>
     <meta name="theme-color" content="#0c2d5a">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
+        body { font-family: Arial, sans-serif; margin: 0px; }
         table { border-collapse: collapse; width: 100%; margin-top: 20px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
@@ -94,190 +94,202 @@
         }
         #strong-tooltip .tt-strong { font-weight: bold; color: #93c5fd; margin-bottom: 2px; }
         #strong-tooltip .tt-greek { color: #86efac; margin-bottom: 4px; }
+        #bu-home-bar {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background: #2c2416;
+            color: #f7f4ef;
+            padding: 10px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 16px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        #bu-home-bar a {
+            color: #f7f4ef;
+            text-decoration: none;
+        }
+        #bu-home-bar a:hover {
+            text-decoration: underline;
+        }
+        #bu-home-bar .bu-sep {
+            opacity: 0.4;
+        }
+        #bu-home-bar .bu-title {
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            opacity: 0.95;
+        }
+        #bu-home-bar a.bu-current {
+            font-weight: 700;
+            color: #f0c14d;          /* gold highlight */
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 <!-- Bible Underground navigation bar -->
-<div id="bu-home-bar" style="
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    background: #2c2416;
-    color: #f7f4ef;
-    padding: 10px 16px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 18px;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-">
-    <a href="index.html" style="color:#f7f4ef; text-decoration:none; font-weight:600;">
-        ← Home
-    </a>
-
-    <span style="opacity:0.4;">|</span>
-
-    <a href="underground.html" style="color:#f7f4ef; text-decoration:none;">
-        Reader
-    </a>
-
-    <a href="lexicon.html" style="color:#f7f4ef; text-decoration:none;">
-        Lexicon
-    </a>
-
-    <a href="interlinear.html" style="color:#f7f4ef; text-decoration:none;">
-        Interlinear
-    </a>
+<div id="bu-home-bar">
+    <a href="index.html">← Home</a>
+    <span class="bu-sep">|</span>
+    <span class="bu-title">Bible Underground</span>
+    <span class="bu-sep">|</span>
+    <a href="underground.html">Reader</a>
+    <a href="lexicon.html" class="bu-current">Lexicon</a>
+    <a href="interlinear.html">Interlinear</a>
 </div>
 
-<!-- Header -->
-<div style="margin-bottom: 12px;">
-    <style>
-    .howto-link {
-        position: relative;
-        display: inline-block;
-        font-size: 0.95rem;
-        text-decoration: underline;
-        cursor: pointer;
-        color: #555;
-    }
-    .howto-link .tooltip {
-        visibility: hidden;
-        width: 290px;
-        background-color: #333;
-        color: #fff;
-        text-align: left;
-        border-radius: 6px;
-        padding: 10px 12px;
-        position: absolute;
-        z-index: 100;
-        top: 130%;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.2s;
-        font-size: 0.9rem;
-        line-height: 1.45;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    }
-    .howto-link .tooltip::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 18px;
-        border-width: 6px;
-        border-style: solid;
-        border-color: transparent transparent #333 transparent;
-    }
-    .howto-link:hover .tooltip {
-        visibility: visible;
-        opacity: 1;
-    }
-    </style>
+<div style="margin: 20px">
+    <!-- Header -->
+    <div style="margin-bottom: 12px;">
+        <style>
+        .howto-link {
+            position: relative;
+            display: inline-block;
+            font-size: 0.95rem;
+            text-decoration: underline;
+            cursor: pointer;
+            color: #555;
+        }
+        .howto-link .tooltip {
+            visibility: hidden;
+            width: 290px;
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px 12px;
+            position: absolute;
+            z-index: 100;
+            top: 130%;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 0.9rem;
+            line-height: 1.45;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        .howto-link .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 18px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent transparent #333 transparent;
+        }
+        .howto-link:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        </style>
 
-    <a href="data/our-translation-goals.html" class="howto-link">
-    How we translate
-    <span class="tooltip">
-        This lexicon follows a set of ten translation goals designed to produce clear, consistent, modern English renderings of the Greek.<br><br>
-        ↑ Click above link to view our 10 Translation goals
-    </span>
-    </a>
-</div>
-<div style="display:flex; align-items:center; gap:15px; margin-bottom:15px; flex-wrap:wrap;">
-    <img src="data/greek-dict-icon-1080tran.png" alt="Today's Greek Dictionary" style="height:100px; width:auto; flex-shrink:0;">
-    <div>
-        <div class="history-buttons" style="margin:0 0 20px 0;">
-            <button id="btn-back" disabled>Back</button>
-            <button id="btn-forward" disabled>Forward</button>
+        <a href="data/our-translation-goals.html" class="howto-link">
+        How we translate
+        <span class="tooltip">
+            This lexicon follows a set of ten translation goals designed to produce clear, consistent, modern English renderings of the Greek.<br><br>
+            ↑ Click above link to view our 10 Translation goals
+        </span>
+        </a>
+    </div>
+    <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px; flex-wrap:wrap;">
+        <img src="data/greek-dict-icon-1080tran.png" alt="Today's Greek Dictionary" style="height:100px; width:auto; flex-shrink:0;">
+        <div>
+            <div class="history-buttons" style="margin:0 0 20px 0;">
+                <button id="btn-back" disabled>Back</button>
+                <button id="btn-forward" disabled>Forward</button>
+            </div>
+            <h2 style="margin:0;">Today's Greek Dictionary</h2>
         </div>
-        <h2 style="margin:0;">Today's Greek Dictionary</h2>
     </div>
-</div>
 
-<!-- Main tools (search + NT + dropdown) – hidden when viewing a record -->
-<div id="main-tools">
-    <summary style="font-size:1.2em; font-weight:bold; cursor:pointer; padding:10px; background:#f8f9fa; border:1px solid #ddd; border-radius:4px;">
-        Search & Lookup Tools
-    </summary>
-    <div style="padding:15px; border:1px solid #ddd; border-top:none; border-radius:0 0 4px 4px;">
+    <!-- Main tools (search + NT + dropdown) – hidden when viewing a record -->
+    <div id="main-tools">
+        <summary style="font-size:1.2em; font-weight:bold; cursor:pointer; padding:10px; background:#f8f9fa; border:1px solid #ddd; border-radius:4px;">
+            Search & Lookup Tools
+        </summary>
+        <div style="padding:15px; border:1px solid #ddd; border-top:none; border-radius:0 0 4px 4px;">
 
-        <!-- Search -->
-        <details id="details-search-dictionary" open>
-            <summary>Search Dictionary</summary>
-            <div style="padding:10px 0;">
-                <label for="search_term"><strong>Search term:</strong></label>
-                <input type="text" id="search_term" style="width:300px; max-width:100%;">
-                <button id="btn-search">Search</button>
-            </div>
-        </details>
+            <!-- Search -->
+            <details id="details-search-dictionary" open>
+                <summary>Search Dictionary</summary>
+                <div style="padding:10px 0;">
+                    <label for="search_term"><strong>Search term:</strong></label>
+                    <input type="text" id="search_term" style="width:300px; max-width:100%;">
+                    <button id="btn-search">Search</button>
+                </div>
+            </details>
 
-        <!-- NT Lookup -->
-        <details id="details-look-up">
-            <summary>Find a Greek word in the New Testament</summary>
-            <div style="padding:10px 0;">
-                <div class="nt-lookup-section">
-                    <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
-                        <div>
-                            <label for="nt-book">Book:</label>
-                            <select id="nt-book">
-                                <option value="Matthew">Matthew</option>
-                                <option value="Mark">Mark</option>
-                                <option value="Luke">Luke</option>
-                                <option value="John">John</option>
-                                <option value="Acts">Acts</option>
-                                <option value="Romans">Romans</option>
-                                <option value="1 Corinthians">1 Corinthians</option>
-                                <option value="2 Corinthians">2 Corinthians</option>
-                                <option value="Galatians">Galatians</option>
-                                <option value="Ephesians">Ephesians</option>
-                                <option value="Philippians">Philippians</option>
-                                <option value="Colossians">Colossians</option>
-                                <option value="1 Thessalonians">1 Thessalonians</option>
-                                <option value="2 Thessalonians">2 Thessalonians</option>
-                                <option value="1 Timothy">1 Timothy</option>
-                                <option value="2 Timothy">2 Timothy</option>
-                                <option value="Titus">Titus</option>
-                                <option value="Philemon">Philemon</option>
-                                <option value="Hebrews">Hebrews</option>
-                                <option value="James">James</option>
-                                <option value="1 Peter">1 Peter</option>
-                                <option value="2 Peter">2 Peter</option>
-                                <option value="1 John">1 John</option>
-                                <option value="2 John">2 John</option>
-                                <option value="3 John">3 John</option>
-                                <option value="Jude">Jude</option>
-                                <option value="Revelation">Revelation</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="nt-chapter">Chapter:</label>
-                            <select id="nt-chapter">
-                                <option value="" disabled selected>Select chapter</option>
-                            </select>
-                        </div>
-                        <div style="align-self:flex-end;">
-                            <button id="open-nt-popup">Open Chapter Viewer</button>
+            <!-- NT Lookup -->
+            <details id="details-look-up">
+                <summary>Find a Greek word in the New Testament</summary>
+                <div style="padding:10px 0;">
+                    <div class="nt-lookup-section">
+                        <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+                            <div>
+                                <label for="nt-book">Book:</label>
+                                <select id="nt-book">
+                                    <option value="Matthew">Matthew</option>
+                                    <option value="Mark">Mark</option>
+                                    <option value="Luke">Luke</option>
+                                    <option value="John">John</option>
+                                    <option value="Acts">Acts</option>
+                                    <option value="Romans">Romans</option>
+                                    <option value="1 Corinthians">1 Corinthians</option>
+                                    <option value="2 Corinthians">2 Corinthians</option>
+                                    <option value="Galatians">Galatians</option>
+                                    <option value="Ephesians">Ephesians</option>
+                                    <option value="Philippians">Philippians</option>
+                                    <option value="Colossians">Colossians</option>
+                                    <option value="1 Thessalonians">1 Thessalonians</option>
+                                    <option value="2 Thessalonians">2 Thessalonians</option>
+                                    <option value="1 Timothy">1 Timothy</option>
+                                    <option value="2 Timothy">2 Timothy</option>
+                                    <option value="Titus">Titus</option>
+                                    <option value="Philemon">Philemon</option>
+                                    <option value="Hebrews">Hebrews</option>
+                                    <option value="James">James</option>
+                                    <option value="1 Peter">1 Peter</option>
+                                    <option value="2 Peter">2 Peter</option>
+                                    <option value="1 John">1 John</option>
+                                    <option value="2 John">2 John</option>
+                                    <option value="3 John">3 John</option>
+                                    <option value="Jude">Jude</option>
+                                    <option value="Revelation">Revelation</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="nt-chapter">Chapter:</label>
+                                <select id="nt-chapter">
+                                    <option value="" disabled selected>Select chapter</option>
+                                </select>
+                            </div>
+                            <div style="align-self:flex-end;">
+                                <button id="open-nt-popup">Open Chapter Viewer</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </details>
+            </details>
 
-        <!-- Greek Word Lookup -->
-        <details id="details-select-greek-word" style="margin-top:25px;">
-            <summary>Greek Word Lookup</summary>
-            <div style="padding:10px 0;">
-                <div id="record_select" class="custom-dropdown">
-                    <div class="dropdown-list" id="dropdown-list" style="max-height:150px; overflow-y:auto; border:1px solid #ddd; padding:10px;">
-                        <!-- filled by JS -->
+            <!-- Greek Word Lookup -->
+            <details id="details-select-greek-word" style="margin-top:25px;">
+                <summary>Greek Word Lookup</summary>
+                <div style="padding:10px 0;">
+                    <div id="record_select" class="custom-dropdown">
+                        <div class="dropdown-list" id="dropdown-list" style="max-height:150px; overflow-y:auto; border:1px solid #ddd; padding:10px;">
+                            <!-- filled by JS -->
+                        </div>
                     </div>
                 </div>
-            </div>
-        </details>
+            </details>
+        </div>
     </div>
 </div>
-
 <!-- Search Results -->
 <div id="search-results-container" style="display:none; margin-top:20px;">
     <h3>Search Results</h3>

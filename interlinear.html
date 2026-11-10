@@ -51,6 +51,24 @@
       color: #f0c14d;          /* gold highlight */
       text-decoration: underline;
     }
+    :root {
+      --bu-home-bar-height: 44px;
+    }
+
+    /* Keep the page header below the home bar when it sticks */
+    header {
+      top: var(--bu-home-bar-height) !important;
+    }
+
+    /* Dictionary panel starts below the home bar */
+    #dict-panel {
+      top: var(--bu-home-bar-height) !important;
+      height: calc(100% - var(--bu-home-bar-height)) !important;
+      z-index: 10000; /* above the home bar so the × is always clickable */
+    }
+    .page-wrap {
+      margin: 20px;
+    }
   </style>
 </head>
 <body>
@@ -65,7 +83,7 @@
     <a href="interlinear.html" class="bu-current">Interlinear</a>
 </div>
 
-<div style="margin: 20px">
+<div class="page-wrap">
   <header>
     <div style="max-width:1100px;margin:0 auto 0.5rem;font-weight:700;font-size:1.05rem;">
       Today's Interlinear New Testament
@@ -114,11 +132,11 @@
   <main id="main">
     <p>Loading…</p>
   </main>
+</div>
 
-  <div id="dict-panel" class="hidden">
-    <button type="button" id="close-dict">×</button>
-    <div id="dict-content"></div>
-  </div>
+<div id="dict-panel" class="hidden">
+  <button type="button" id="close-dict">×</button>
+  <div id="dict-content"></div>
 </div>
 
 <script type="module" src="data/app.js"></script>

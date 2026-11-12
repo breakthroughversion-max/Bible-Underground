@@ -213,6 +213,82 @@ function demonstrativeGlossFromStrongs(strongs, morph = '') {
   }
 }
 
+function isPluralMorph(morph) {
+  const m = (morph || '').toUpperCase().trim();
+  // N-NPM, A-APF, T-DPN, etc. — number letter is S or P after case
+  const p = m.match(/^[NART]-([NGDAV])([SP])([MFN])/);
+  return !!(p && p[2] === 'P');
+}
+
+function pluralizeEnglishWord(word) {
+  if (!word) return word;
+
+  const lower = word.toLowerCase();
+
+  // Same form in singular and plural
+  const invariant = new Set([
+    'sheep', 'deer', 'fish', 'moose', 'swine',
+    'series', 'species', 'aircraft', 'offspring',
+  ]);
+  if (invariant.has(lower)) {
+    // Preserve original capitalization
+    return word;
+  }
+
+  // Common irregulars
+  const irregular = {
+    child: 'children',
+    man: 'men',
+    woman: 'women',
+    person: 'people',
+    tooth: 'teeth',
+    foot: 'feet',
+    mouse: 'mice',
+    goose: 'geese',
+    ox: 'oxen',
+    die: 'dice',
+    index: 'indices',
+    crisis: 'crises',
+    thesis: 'theses',
+    analysis: 'analyses',
+    basis: 'bases',
+  };
+  if (irregular[lower]) {
+    const pl = irregular[lower];
+    // Match capitalization of first letter if original was capitalized
+    if (word[0] === word[0].toUpperCase()) {
+      return pl.charAt(0).toUpperCase() + pl.slice(1);
+    }
+    return pl;
+  }
+
+  // Regular rules
+  if (/(s|ss|sh|ch|x|z)$/i.test(word)) return word + 'es';
+  if (/[^aeiou]y$/i.test(word)) return word.slice(0, -1) + 'ies';
+  if (/fe$/i.test(word)) return word.slice(0, -2) + 'ves';
+  if (/f$/i.test(word)) return word.slice(0, -1) + 'ves';
+  if (/o$/i.test(word)) return word + 'es';
+  return word + 's';
+}
+
+/**
+ * For plural nouns: drop "a"/"an" and pluralize the main word.
+ * Examples: "a scroll" → "scrolls", "an angel" → "angels"
+ */
+function adjustPluralNounGloss(gloss, morph) {
+  gloss = (gloss || '').trim();
+  if (!gloss || !isPluralMorph(morph)) return gloss;
+
+  const m = (morph || '').toUpperCase().trim();
+  // Only nouns — not adjectives or articles
+  if (!m.startsWith('N-')) return gloss;
+
+  let g = gloss.replace(/\b(an?)\s+/gi, '');
+  return g.replace(/([A-Za-z]+)([^A-Za-z]*)$/, (_, word, tail) => {
+    return pluralizeEnglishWord(word) + tail;
+  });
+}
+
 function adjustVerbGloss(baseGloss, morph) {
   let base = (baseGloss || '').trim();
   const m = (morph || '').toUpperCase().trim();
@@ -516,8 +592,12 @@ function buildGloss(tok, shortGlosses) {
   if (gloss == null) gloss = demonstrativeGlossFromStrongs(strongs, morph);
   if (gloss == null) {
     const raw = shortGlosses[strongs] || shortGlosses[normalizeStrongs(strongs)] || '';
-    if (/^v/i.test(morph)) gloss = adjustVerbGloss(raw, morph);
-    else gloss = adjustGlossForMorph(raw, morph);
+    if (/^v/i.test(morph)) {
+      gloss = adjustVerbGloss(raw, morph);
+    } else {
+      gloss = adjustGlossForMorph(raw, morph);
+      gloss = adjustPluralNounGloss(gloss, morph);
+    }
   }
   return gloss || '';
 }
@@ -529,6 +609,15 @@ function escapeHtml(s) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function formatLexText(text) {
+  if (!text) return '';
+  return escapeHtml(String(text))
+    // literal backslash-n sequences from export
+    .replace(/\\n/g, '\n')
+    // any run of newlines → one break
+    .replace(/\n+/g, '<br>');
 }
 
 function renderChapter(bookInfo, chapter, englishBV, englishTB, greek, shortGlosses) {
@@ -637,25 +726,25 @@ function bindWordClicks() {
       // Definition parts — same order & labels as dict.php
       const parts = [];
       if (row.etymology) {
-        parts.push(`<p><strong>Etymology:</strong> ${escapeHtml(row.etymology).replace(/\n/g, '<br>')}</p>`);
+        parts.push(`<p><strong>Etymology:</strong> ${formatLexText(row.etymology)}</p>`);
       }
       if (row.definition) {
-        parts.push(`<p><strong>Translation:</strong> ${escapeHtml(row.definition).replace(/\n/g, '<br>')}</p>`);
+        parts.push(`<p><strong>Translation:</strong> ${formatLexText(row.definition)}</p>`);
       }
       if (row.comments) {
-        parts.push(`<p><strong>Comments:</strong> ${escapeHtml(row.comments).replace(/\n/g, '<br>')}</p>`);
+        parts.push(`<p><strong>Comments:</strong> ${formatLexText(row.comments)}</p>`);
       }
       if (row.mounce) {
-        parts.push(`<p><strong>Mounce:</strong> ${escapeHtml(row.mounce).replace(/\n/g, '<br>')}</p>`);
+        parts.push(`<p><strong>Mounce:</strong> ${formatLexText(row.mounce)}</p>`);
       }
       if (row.thayer) {
-        parts.push(`<p><strong>Thayer:</strong> ${escapeHtml(row.thayer).replace(/\n/g, '<br>')}</p>`);
+        parts.push(`<p><strong>Thayer:</strong> ${formatLexText(row.thayer)}</p>`);
       }
       if (row.strongs) {
-        parts.push(`<p><strong>Strong's:</strong> ${escapeHtml(row.strongs).replace(/\n/g, '<br>')}</p>`);
+        parts.push(`<p><strong>Strong's:</strong> ${formatLexText(row.strongs)}</p>`);
       }
       if (row.dodson) {
-        parts.push(`<p><strong>Dodson:</strong> ${escapeHtml(row.dodson).replace(/\n/g, '<br>')}</p>`);
+        parts.push(`<p><strong>Dodson:</strong> ${formatLexText(row.dodson)}</p>`);
       }
       if (row.kjv_terms) {
         parts.push(`<p><strong>KJV terms:</strong> ${escapeHtml(row.kjv_terms)}</p>`);

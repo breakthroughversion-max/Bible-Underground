@@ -1,15 +1,27 @@
-# Bible-Underground
+# Bible Underground
 
-Open repository for the **Breakthrough Versions** of the New Testament, Greek lexicon, and offline web readers.
+**We've gone underground — escaping centuries of traditional wording — to bring you a more accurate Bible in the language you speak.**
 
-Created by Ray Geide.
+Open repository for the **Breakthrough Versions** of the New Testament, a full Greek lexicon, and offline-capable web tools.
 
-## Live Reader
+Created by **Ray Geide**.
 
-**Bible Underground (all three versions)**  
-→ [Open the live reader](https://breakthroughversion-max.github.io/Bible-Underground/apps/combined-reader/underground.html)
+---
 
-## The Three Versions
+### Live Tools (GitHub Pages)
+
+| Tool | Description | Link |
+|------|-------------|------|
+| **Bible Underground Reader** | Read all three Breakthrough Versions offline in your browser | [Open Reader](https://breakthroughversion-max.github.io/Bible-Underground/underground.html) |
+| **Greek Lexicon** | Today's Greek Dictionary with Strong’s numbers + traditional sources | [Open Lexicon](https://breakthroughversion-max.github.io/Bible-Underground/lexicon.html) |
+| **Interlinear Bible** | Word-by-word Greek + morphology + Breakthrough translations | [Open Interlinear](https://breakthroughversion-max.github.io/Bible-Underground/interlinear.html) |
+| **Landing Page** | Main entry point | [Bible Underground Home](https://breakthroughversion-max.github.io/Bible-Underground/) |
+
+---
+
+### The Three Versions
+
+All three are original translations by Ray Geide:
 
 - **Breakthrough Version (BV)**  
   High-definition literal translation of the modern critical Greek text (Nestle-Aland 27 / UBS4)
@@ -17,36 +29,58 @@ Created by Ray Geide.
 - **Breakthrough KJV (BKJV)**  
   High-definition literal translation based on the Textus Receptus tradition
 
-- **Today's Bible (LivingBV)**  
-  The Living Breakthrough Version – a dynamic rendering with helps
+- **Today’s Bible (LivingBV)**  
+  The Living Breakthrough Version — a dynamic rendering with helpful notes
 
-All three are original translations by Ray Geide.
+---
 
-## Repository Contents
+### Repository Contents
 
-| Folder / File              | Description |
-|---------------------------|-----------|
-| [`texts/`](texts/)        | Full text files of the three Bible versions |
-| [`lexicon/`](lexicon/)    | Complete Greek lexicon (JSON) with Strong’s numbers, definitions, and traditional sources |
-| [`apps/combined-reader/`](apps/combined-reader/) | Offline-capable web reader (Bible Underground) |
+| File / Folder | Description |
+|---------------|-------------|
+| `BV.bu.txt` | Full text of the Breakthrough Version |
+| `BKJV.bu.txt` | Full text of the Breakthrough KJV |
+| `LivingBV.bu.txt` | Full text of Today’s Bible (Living Breakthrough Version) |
+| `greek-data-nopt.json` | Complete Greek lexicon (Today’s Greek Dictionary) |
+| `greek-data-README.md` | Documentation for the lexicon data |
+| `underground.html` | Offline Bible reader (all three versions) |
+| `lexicon.html` | Offline Greek lexicon app |
+| `interlinear.html` | Offline interlinear Bible |
+| `index.html` | Landing page for the tools |
+| `data/` | Supporting assets, styles, icons, and data files |
+| `LICENSE` | Copyright and usage terms |
 
-## Greek Lexicon
+---
 
-Full export of **Today's Greek Dictionary** in JSON format.  
-Includes original definitions plus Dodson, Mounce, Strong’s, and Thayer for comparison.
+### Greek Lexicon
 
-→ [View the lexicon folder](lexicon/)
+Full export of **Today’s Greek Dictionary**.
 
-## Copyright
+Each entry includes:
+- Strong’s number
+- Greek word + transliteration + pronunciation
+- Part of speech & etymology
+- Original definition used in Today’s Bible
+- Traditional definitions (Dodson, Mounce, Strong’s, Thayer)
+- KJV terms and occurrence references
+
+See `greek-data-README.md` for the complete field list.
+
+---
+
+### Copyright
 
 Copyright © Ray Geide. All rights reserved.
 
-The Breakthrough Version, Breakthrough KJV, Today's Bible texts, lexicon, and related materials are original works.  
-Free for personal study and non-commercial use.  
-Redistribution, modification, or commercial use requires written permission.
+The Breakthrough Version, Breakthrough KJV, Today’s Bible texts, lexicon, and related materials are original works.
 
-## Links
+**Free for personal study and non-commercial use.**  
+Redistribution, modification, or commercial use requires prior written permission.
+
+---
+
+### Links
 
 - Main website: [https://breakthroughversion.com](https://breakthroughversion.com)
 - Online lexicon: [https://todaysbible.online/lexicon.php](https://todaysbible.online/lexicon.php)
-- Translator’s articles & videos available on the main site
+- Translator’s articles, videos, and blog available on the main site

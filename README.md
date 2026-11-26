@@ -13,7 +13,7 @@ Created by **Ray Geide**.
 | Tool | Description | Link |
 |------|-------------|------|
 | **Bible Underground Reader** | Read all three Breakthrough Versions offline in your browser | [Open Reader](https://breakthroughversion-max.github.io/Bible-Underground/underground.html) |
-| **Greek Lexicon** | Today's Greek Dictionary with Strong’s numbers + traditional sources | [Open Lexicon](https://breakthroughversion-max.github.io/Bible-Underground/lexicon.html) |
+| **Greek Lexicon** | Today's Greek Dictionary uses a completely new translation framework | [Open Lexicon](https://breakthroughversion-max.github.io/Bible-Underground/lexicon.html) |
 | **Interlinear Bible** | Word-by-word Greek + morphology + Breakthrough translations | [Open Interlinear](https://breakthroughversion-max.github.io/Bible-Underground/interlinear.html) |
 | **Landing Page** | Main entry point | [Bible Underground Home](https://breakthroughversion-max.github.io/Bible-Underground/) |
 
@@ -55,6 +55,8 @@ All three are original translations by Ray Geide:
 ### Greek Lexicon
 
 Full export of **Today’s Greek Dictionary**.
+
+A New Greek-English Translation Framework
 
 Each entry includes:
 - Strong’s number

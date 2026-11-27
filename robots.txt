@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://breakthroughversion-max.github.io/Bible-Underground/sitemap.xml
